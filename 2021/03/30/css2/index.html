@@ -1,25 +1,11 @@
 <!DOCTYPE html>
-<html lang="zh-Hans">
+<html>
 <head>
-  <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
-<meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 5.4.0">
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
-  <link rel="mask-icon" href="/images/logo.svg" color="#222">
-
-<link rel="stylesheet" href="/css/main.css">
-
-
-<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
-
-<script id="hexo-configurations">
-    var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"haley06.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
-  </script>
-
+  <meta charset="utf-8">
+  
+  
+  <title>css2 | haley</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="1.Emment语法1.1快速生成html: 标签名+table键； &lt;div&gt;*3   父子关系：  ul&gt;li生成 兄弟： div+p 生成带类名或id的标签，div.(类名)或div#（类名） 如果生成div类名有顺序，则用{＄}p.a＄*5 生成标签里默认显示文字，div{文字内容}文字写在大括号里 div{＄}*5,生成内容为1-5的div  1.2快速生成css:w1">
 <meta property="og:type" content="article">
 <meta property="og:title" content="css2">
@@ -31,162 +17,83 @@
 <meta property="article:modified_time" content="2021-03-29T11:58:37.673Z">
 <meta property="article:author" content="haley06">
 <meta name="twitter:card" content="summary">
-
-<link rel="canonical" href="http://haley06.com/2021/03/30/css2/">
-
-
-<script id="page-configurations">
-  // https://hexo.io/docs/variables.html
-  CONFIG.page = {
-    sidebar: "",
-    isHome : false,
-    isPost : true,
-    lang   : 'zh-Hans'
-  };
-</script>
-
-  <title>css2 | haley</title>
   
+    <link rel="alternate" href="/atom.xml" title="haley" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
 
+  
+  
+<link rel="stylesheet" href="/css/style.css">
 
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
 
+  
+<meta name="generator" content="Hexo 5.4.0"></head>
 
-
-
-  <noscript>
-  <style>
-  .use-motion .brand,
-  .use-motion .menu-item,
-  .sidebar-inner,
-  .use-motion .post-block,
-  .use-motion .pagination,
-  .use-motion .comments,
-  .use-motion .post-header,
-  .use-motion .post-body,
-  .use-motion .collection-header { opacity: initial; }
-
-  .use-motion .site-title,
-  .use-motion .site-subtitle {
-    opacity: initial;
-    top: initial;
-  }
-
-  .use-motion .logo-line-before i { left: initial; }
-  .use-motion .logo-line-after i { right: initial; }
-  </style>
-</noscript>
-
-</head>
-
-<body itemscope itemtype="http://schema.org/WebPage">
-  <div class="container use-motion">
-    <div class="headband"></div>
-
-    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-container">
-  <div class="site-nav-toggle">
-    <div class="toggle" aria-label="تشغيل شريط التصفح">
-      <span class="toggle-line toggle-line-first"></span>
-      <span class="toggle-line toggle-line-middle"></span>
-      <span class="toggle-line toggle-line-last"></span>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">haley</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Suche"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Suche"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://haley06.com"></form>
+      </div>
     </div>
   </div>
+</header>
 
-  <div class="site-meta">
-
-    <a href="/" class="brand" rel="start">
-      <span class="logo-line-before"><i></i></span>
-      <h1 class="site-title">haley</h1>
-      <span class="logo-line-after"><i></i></span>
-    </a>
-  </div>
-
-  <div class="site-nav-right">
-    <div class="toggle popup-trigger">
-    </div>
-  </div>
-</div>
-
-
-
-
-<nav class="site-nav">
-  <ul id="menu" class="main-menu menu">
-        <li class="menu-item menu-item-home">
-
-    <a href="/" rel="section"><i class="fa-home fa-fw"></i>Home</a>
-
-  </li>
-        <li class="menu-item menu-item-archives">
-
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>الأرشيفات</a>
-
-  </li>
-  </ul>
-</nav>
-
-
-
-
-</div>
-    </header>
-
+      <div class="outer">
+        <section id="main"><article id="post-css2" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2021/03/30/css2/" class="article-date">
+  <time class="dt-published" datetime="2021-03-29T19:07:30.000Z" itemprop="datePublished">2021-03-29</time>
+</a>
     
-  <div class="back-to-top">
-    <i class="fa fa-arrow-up"></i>
-    <span>0%</span>
   </div>
-
-
-    <main class="main">
-      <div class="main-inner">
-        <div class="content-wrap">
-          
-
-          <div class="content post posts-expand">
-            
-
+  <div class="article-inner">
     
+    
+      <header class="article-header">
+        
   
+    <h1 class="p-name article-title" itemprop="headline name">
+      css2
+    </h1>
   
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
-    <link itemprop="mainEntityOfPage" href="http://haley06.com/2021/03/30/css2/">
 
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="haley06">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="haley">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          css2
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">نُشر في</span>
-              
-
-              <time title="أُنشأ: 2021-03-29 19:07:30 / عُدل: 11:58:37" itemprop="dateCreated datePublished" datetime="2021-03-29T19:07:30Z">2021-03-29</time>
-            </span>
-
-          
-
-        </div>
       </header>
-
     
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
+    <div class="e-content article-entry" itemprop="articleBody">
       
         <h2 id="1-Emment语法"><a href="#1-Emment语法" class="headerlink" title="1.Emment语法"></a>1.Emment语法</h2><h3 id="1-1快速生成html"><a href="#1-1快速生成html" class="headerlink" title="1.1快速生成html:"></a>1.1快速生成html:</h3><ul>
 <li>标签名+table键；</li>
@@ -675,186 +582,134 @@
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">background-color</span>: <span class="number">#D9AFD9</span>;</span><br><span class="line"><span class="attribute">background-image</span>: <span class="built_in">linear-gradient</span>(<span class="number">0deg</span>, <span class="number">#D9AFD9</span> <span class="number">0%</span>, <span class="number">#97D9E1</span> <span class="number">100%</span>);</span><br><span class="line"></span><br><span class="line"><span class="attribute">background-color</span>: <span class="number">#3EECAC</span>;</span><br><span class="line"><span class="attribute">background-image</span>: <span class="built_in">linear-gradient</span>(<span class="number">19deg</span>, <span class="number">#3EECAC</span> <span class="number">0%</span>, <span class="number">#EE74E1</span> <span class="number">100%</span>);</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
 
+      
     </div>
-
-    
-    
-    
-
-      <footer class="post-footer">
-
-        
-
-
-        
-    <div class="post-nav">
-      <div class="post-nav-item">
-    <a href="/2021/03/30/css%E6%80%BB%E7%BB%93/" rel="prev" title="css1">
-      <i class="fa fa-chevron-left"></i> css1
-    </a></div>
-      <div class="post-nav-item">
-    <a href="/2021/03/30/git%E6%80%BB%E7%BB%93/" rel="next" title="前3+git总结">
-      前3+git总结 <i class="fa fa-chevron-right"></i>
-    </a></div>
-    </div>
-      </footer>
-    
-  </article>
-  
-  
-  
-
-
-
-          </div>
-          
-
-<script>
-  window.addEventListener('tabs:register', () => {
-    let { activeClass } = CONFIG.comments;
-    if (CONFIG.comments.storage) {
-      activeClass = localStorage.getItem('comments_active') || activeClass;
-    }
-    if (activeClass) {
-      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
-      if (activeTab) {
-        activeTab.click();
-      }
-    }
-  });
-  if (CONFIG.comments.storage) {
-    window.addEventListener('tabs:click', event => {
-      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
-      let commentClass = event.target.classList[1];
-      localStorage.setItem('comments_active', commentClass);
-    });
-  }
-</script>
-
-        </div>
-          
-  
-  <div class="toggle sidebar-toggle">
-    <span class="toggle-line toggle-line-first"></span>
-    <span class="toggle-line toggle-line-middle"></span>
-    <span class="toggle-line toggle-line-last"></span>
-  </div>
-
-  <aside class="sidebar">
-    <div class="sidebar-inner">
-
-      <ul class="sidebar-nav motion-element">
-        <li class="sidebar-nav-toc">
-          المحتويات
-        </li>
-        <li class="sidebar-nav-overview">
-          عام
-        </li>
-      </ul>
-
-      <!--noindex-->
-      <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-Emment%E8%AF%AD%E6%B3%95"><span class="nav-number">1.</span> <span class="nav-text">1.Emment语法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1%E5%BF%AB%E9%80%9F%E7%94%9F%E6%88%90html"><span class="nav-number">1.1.</span> <span class="nav-text">1.1快速生成html:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2%E5%BF%AB%E9%80%9F%E7%94%9F%E6%88%90css"><span class="nav-number">1.2.</span> <span class="nav-text">1.2快速生成css:</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-css%E5%A4%8D%E5%90%88%E9%80%89%E6%8B%A9%E5%99%A8"><span class="nav-number">2.</span> <span class="nav-text">2.css复合选择器</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1%E5%90%8E%E4%BB%A3%EF%BC%88%E5%8C%85%E5%90%AB%EF%BC%89%E9%80%89%E6%8B%A9%E5%99%A8"><span class="nav-number">2.1.</span> <span class="nav-text">2.1后代（包含）选择器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2%E5%AD%90%E9%80%89%E6%8B%A9%E5%99%A8"><span class="nav-number">2.2.</span> <span class="nav-text">2.2子选择器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-3%E5%B9%B6%E9%9B%86%E9%80%89%E6%8B%A9%E5%99%A8%EF%BC%88%E9%9B%86%E4%BD%93%E5%A3%B0%E6%98%8E%EF%BC%89"><span class="nav-number">2.3.</span> <span class="nav-text">2.3并集选择器（集体声明）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-4%E4%BC%AA%E7%B1%BB%E9%80%89%E6%8B%A9%E5%99%A8"><span class="nav-number">2.4.</span> <span class="nav-text">2.4伪类选择器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-5%EF%BC%9Afocus%E4%BC%AA%E7%B1%BB%E9%80%89%E6%8B%A9%E5%99%A8"><span class="nav-number">2.5.</span> <span class="nav-text">2.5：focus伪类选择器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-6%E5%A4%8D%E5%90%88%E5%9E%8B%E9%80%89%E6%8B%A9%E5%99%A8%E6%80%BB%E7%BB%93"><span class="nav-number">2.6.</span> <span class="nav-text">2.6复合型选择器总结</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-%E5%85%83%E7%B4%A0%E6%98%BE%E7%A4%BA%E6%A8%A1%E5%BC%8F"><span class="nav-number">3.</span> <span class="nav-text">3.元素显示模式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-1%E5%9D%97%E5%85%83%E7%B4%A0%EF%BC%9A"><span class="nav-number">3.1.</span> <span class="nav-text">3.1块元素：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-2%E8%A1%8C%E5%86%85%EF%BC%88%E5%86%85%E8%81%94%EF%BC%89%E5%85%83%E7%B4%A0"><span class="nav-number">3.2.</span> <span class="nav-text">3.2行内（内联）元素</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-3%E8%A1%8C%E5%86%85%E5%9D%97%E5%85%83%E7%B4%A0"><span class="nav-number">3.3.</span> <span class="nav-text">3.3行内块元素</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-4%E5%85%83%E7%B4%A0%E6%98%BE%E7%A4%BA%E6%A8%A1%E5%BC%8F%E6%80%BB%E7%BB%93"><span class="nav-number">3.4.</span> <span class="nav-text">3.4元素显示模式总结</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-5%E5%85%83%E7%B4%A0%E6%98%BE%E7%A4%BA%E6%A8%A1%E5%BC%8F%E8%BD%AC%E6%8D%A2"><span class="nav-number">3.5.</span> <span class="nav-text">3.5元素显示模式转换</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-css%E8%83%8C%E6%99%AF"><span class="nav-number">4.</span> <span class="nav-text">4.css背景</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#4-1%E8%83%8C%E6%99%AF%E9%A2%9C%E8%89%B2"><span class="nav-number">4.1.</span> <span class="nav-text">4.1背景颜色</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-2%E8%83%8C%E6%99%AF%E5%9B%BE%E7%89%87"><span class="nav-number">4.2.</span> <span class="nav-text">4.2背景图片</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-3%E8%83%8C%E6%99%AF%E5%B9%B3%E9%93%BA"><span class="nav-number">4.3.</span> <span class="nav-text">4.3背景平铺</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-4%E8%83%8C%E6%99%AF%E5%9B%BE%E7%89%87%E4%BD%8D%E7%BD%AE"><span class="nav-number">4.4.</span> <span class="nav-text">4.4背景图片位置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-5%E8%83%8C%E6%99%AF%E5%9B%BE%E5%83%8F%E5%9B%BA%E5%AE%9A%EF%BC%88%E8%83%8C%E6%99%AF%E9%99%84%E7%9D%80%EF%BC%89"><span class="nav-number">4.5.</span> <span class="nav-text">4.5背景图像固定（背景附着）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-6%E8%83%8C%E6%99%AF%E9%A2%9C%E8%89%B2%E5%8D%8A%E9%80%8F%E6%98%8E"><span class="nav-number">4.6.</span> <span class="nav-text">4.6背景颜色半透明</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-7%E8%83%8C%E6%99%AF%E6%80%BB%E7%BB%93"><span class="nav-number">4.7.</span> <span class="nav-text">4.7背景总结</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-css%E4%B8%89%E5%A4%A7%E7%89%B9%E6%80%A7"><span class="nav-number">5.</span> <span class="nav-text">5.css三大特性</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#5-1%E5%B1%82%E5%8F%A0%E6%80%A7"><span class="nav-number">5.1.</span> <span class="nav-text">5.1层叠性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-2%E7%BB%A7%E6%89%BF%E6%80%A7"><span class="nav-number">5.2.</span> <span class="nav-text">5.2继承性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-3%E4%BC%98%E5%85%88%E7%BA%A7"><span class="nav-number">5.3.</span> <span class="nav-text">5.3优先级</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B"><span class="nav-number">6.</span> <span class="nav-text">6.盒子模型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#6-1-%E7%BD%91%E9%A1%B5%E5%B8%83%E5%B1%80%E6%9C%AC%E8%B4%A8"><span class="nav-number">6.1.</span> <span class="nav-text">6.1 网页布局本质</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-2%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B%E7%BB%84%E6%88%90"><span class="nav-number">6.2.</span> <span class="nav-text">6.2盒子模型组成</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-3%E8%BE%B9%E6%A1%86"><span class="nav-number">6.3.</span> <span class="nav-text">6.3边框</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-4%E8%A1%A8%E6%A0%BC%E7%BB%86%E7%BA%BF%E8%BE%B9%E6%A1%86"><span class="nav-number">6.4.</span> <span class="nav-text">6.4表格细线边框</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-5%E8%BE%B9%E6%A1%86%E5%BD%B1%E5%93%8D%E7%9B%92%E5%AD%90%E5%AE%9E%E9%99%85%E5%A4%A7%E5%B0%8F%EF%BC%9A"><span class="nav-number">6.5.</span> <span class="nav-text">6.5边框影响盒子实际大小：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-6%E5%86%85%E8%BE%B9%E8%B7%9D"><span class="nav-number">6.6.</span> <span class="nav-text">6.6内边距</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-7%E5%A4%96%E8%BE%B9%E8%B7%9D"><span class="nav-number">6.7.</span> <span class="nav-text">6.7外边距</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-8%E6%B8%85%E9%99%A4%E5%86%85%E5%A4%96%E8%BE%B9%E8%B7%9D"><span class="nav-number">6.8.</span> <span class="nav-text">6.8清除内外边距</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-9%E5%9C%86%E8%A7%92%E8%BE%B9%E6%A1%86"><span class="nav-number">6.9.</span> <span class="nav-text">6.9圆角边框</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-10%E7%9B%92%E5%AD%90%E9%98%B4%E5%BD%B1"><span class="nav-number">6.10.</span> <span class="nav-text">6.10盒子阴影</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-11%E6%96%87%E5%AD%97%E9%98%B4%E5%BD%B1"><span class="nav-number">6.11.</span> <span class="nav-text">6.11文字阴影</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7-%E6%B5%AE%E5%8A%A8"><span class="nav-number">7.</span> <span class="nav-text">7.浮动</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#7-1%E4%BC%A0%E7%BB%9F%E7%BD%91%E9%A1%B5%E5%B8%83%E5%B1%80%E6%96%B9%E5%BC%8F"><span class="nav-number">7.1.</span> <span class="nav-text">7.1传统网页布局方式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-2%E6%B5%AE%E5%8A%A8"><span class="nav-number">7.2.</span> <span class="nav-text">7.2浮动</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-2-1%E4%B8%BA%E4%BB%80%E4%B9%88%E9%9C%80%E8%A6%81%E6%B5%AE%E5%8A%A8%EF%BC%9F"><span class="nav-number">7.3.</span> <span class="nav-text">7.2.1为什么需要浮动？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-2-2%E6%B5%AE%E5%8A%A8"><span class="nav-number">7.4.</span> <span class="nav-text">7.2.2浮动</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-2-3%E6%B5%AE%E5%8A%A8%E7%89%B9%E6%80%A7"><span class="nav-number">7.5.</span> <span class="nav-text">7.2.3浮动特性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-2-4%E6%B5%AE%E5%8A%A8%E5%92%8C%E6%A0%87%E5%87%86%E6%B5%81%E6%90%AD%E9%85%8D"><span class="nav-number">7.6.</span> <span class="nav-text">7.2.4浮动和标准流搭配</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-3%E6%B8%85%E9%99%A4%E6%B5%AE%E5%8A%A8"><span class="nav-number">7.7.</span> <span class="nav-text">7.3清除浮动</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#8-css%E5%B1%9E%E6%80%A7%E4%B9%A6%E5%86%99%E9%A1%BA%E5%BA%8F"><span class="nav-number">8.</span> <span class="nav-text">8.css属性书写顺序</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#9-%E9%A1%B5%E9%9D%A2%E5%B8%83%E5%B1%80%E6%95%B4%E4%BD%93%E6%80%9D%E8%B7%AF%EF%BC%9A"><span class="nav-number">9.</span> <span class="nav-text">9.页面布局整体思路：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#10%E5%AE%9A%E4%BD%8D"><span class="nav-number">10.</span> <span class="nav-text">10定位</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#10-1%E5%AE%9A%E4%BD%8D%E7%BB%84%E6%88%90"><span class="nav-number">10.1.</span> <span class="nav-text">10.1定位组成</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#10-1-1%E9%9D%99%E6%80%81%E5%AE%9A%E4%BD%8D%EF%BC%9A%E6%97%A0%E5%AE%9A%E4%BD%8D"><span class="nav-number">10.2.</span> <span class="nav-text">10.1.1静态定位：无定位</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#10-1-2%E7%9B%B8%E5%AF%B9%E5%AE%9A%E4%BD%8D"><span class="nav-number">10.3.</span> <span class="nav-text">10.1.2相对定位</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#10-1-3%E7%BB%9D%E5%AF%B9%E5%AE%9A%E4%BD%8D"><span class="nav-number">10.4.</span> <span class="nav-text">10.1.3绝对定位</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#10-1-4%E5%AD%90%E7%BB%9D%E7%88%B6%E7%9B%B8"><span class="nav-number">10.5.</span> <span class="nav-text">10.1.4子绝父相</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#10-1-5%E5%9B%BA%E5%AE%9A%E5%AE%9A%E4%BD%8D"><span class="nav-number">10.6.</span> <span class="nav-text">10.1.5固定定位</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#10-1-6%E7%B2%98%E6%80%A7%E5%AE%9A%E4%BD%8D%EF%BC%88%E5%B0%91%E7%94%A8%EF%BC%89"><span class="nav-number">10.7.</span> <span class="nav-text">10.1.6粘性定位（少用）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#10-1-7-%E5%AE%9A%E4%BD%8D%E6%80%BB%E7%BB%93"><span class="nav-number">10.8.</span> <span class="nav-text">10.1.7 定位总结</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#10-2%E5%AE%9A%E4%BD%8D%E5%8F%A0%E6%94%BE%E6%AC%A1%E5%BA%8F"><span class="nav-number">10.9.</span> <span class="nav-text">10.2定位叠放次序</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#10-3%E5%AE%9A%E4%BD%8D%E6%8B%93%E5%B1%95"><span class="nav-number">10.10.</span> <span class="nav-text">10.3定位拓展</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#10-3-1%E7%BB%9D%E5%AF%B9%E5%AE%9A%E4%BD%8D%E6%B0%B4%E5%B9%B3%E5%9E%82%E7%9B%B4%E5%B1%85%E4%B8%AD"><span class="nav-number">10.11.</span> <span class="nav-text">10.3.1绝对定位水平垂直居中</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#10-3-2%E5%AE%9A%E4%BD%8D%E7%89%B9%E6%80%A7"><span class="nav-number">10.12.</span> <span class="nav-text">10.3.2定位特性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#10-3-3%E5%8E%8B%E6%96%87%E5%AD%97"><span class="nav-number">10.13.</span> <span class="nav-text">10.3.3压文字</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#10-4%E7%BD%91%E9%A1%B5%E5%B8%83%E5%B1%80%E6%80%BB%E7%BB%93"><span class="nav-number">10.14.</span> <span class="nav-text">10.4网页布局总结</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#10-5%E5%85%83%E7%B4%A0%E6%98%BE%E7%A4%BA%E4%B8%8E%E9%9A%90%E8%97%8F%E5%B1%9E%E6%80%A7"><span class="nav-number">10.15.</span> <span class="nav-text">10.5元素显示与隐藏属性</span></a></li></ol></li></ol></div>
-      </div>
-      <!--/noindex-->
-
-      <div class="site-overview-wrap sidebar-panel">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-  <p class="site-author-name" itemprop="name">haley06</p>
-  <div class="site-description" itemprop="description"></div>
-</div>
-<div class="site-state-wrap motion-element">
-  <nav class="site-state">
-      <div class="site-state-item site-state-posts">
-          <a href="/archives/">
-        
-          <span class="site-state-item-count">9</span>
-          <span class="site-state-item-name">المقالات</span>
-        </a>
-      </div>
-  </nav>
-</div>
-
-
-
-      </div>
-
-    </div>
-  </aside>
-  <div id="sidebar-dimmer"></div>
-
-
-      </div>
-    </main>
-
-    <footer class="footer">
-      <div class="footer-inner">
-        
-
-        
-
-<div class="copyright">
-  
-  &copy; 
-  <span itemprop="copyrightYear">2021</span>
-  <span class="with-love">
-    <i class="fa fa-heart"></i>
-  </span>
-  <span class="author" itemprop="copyrightHolder">haley06</span>
-</div>
-  <div class="powered-by">تطبيق الموقع <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a>
-  </div>
-
-        
-
-
-
-
-
-
-
-
-      </div>
+    <footer class="article-footer">
+      <a data-url="http://haley06.com/2021/03/30/css2/" data-id="ckmul75iq0003g8vjeahq27jn" data-title="css2" class="article-share-link">Teilen</a>
+      
+      
+      
     </footer>
   </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2021/03/30/git%E6%80%BB%E7%BB%93/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Neuer</strong>
+      <div class="article-nav-title">
+        
+          前3+git总结
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2021/03/30/css%E6%80%BB%E7%BB%93/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Älter</strong>
+      <div class="article-nav-title">css1</div>
+    </a>
+  
+</nav>
 
   
-  <script src="/lib/anime.min.js"></script>
-  <script src="/lib/velocity/velocity.min.js"></script>
-  <script src="/lib/velocity/velocity.ui.min.js"></script>
-
-<script src="/js/utils.js"></script>
-
-<script src="/js/motion.js"></script>
+</article>
 
 
-<script src="/js/schemes/pisces.js"></script>
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archiv</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/03/">March 2021</a></li></ul>
+    </div>
+  </div>
 
 
-<script src="/js/next-boot.js"></script>
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">letzter Beitrag</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2021/03/30/hello/">hello</a>
+          </li>
+        
+          <li>
+            <a href="/2021/03/30/%E6%B3%A8%E5%86%8C%E7%99%BB%E5%BD%95%E6%97%A5%E5%BF%97/">注册登录日志</a>
+          </li>
+        
+          <li>
+            <a href="/2021/03/30/git%E6%80%BB%E7%BB%93/">前3+git总结</a>
+          </li>
+        
+          <li>
+            <a href="/2021/03/30/css2/">css2</a>
+          </li>
+        
+          <li>
+            <a href="/2021/03/30/css%E6%80%BB%E7%BB%93/">css1</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
 
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2021 haley06<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.4.1.min.js"></script>
 
 
 
   
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
 
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-  
-
-  
-
+  </div>
 </body>
 </html>

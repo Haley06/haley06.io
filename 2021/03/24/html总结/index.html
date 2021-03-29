@@ -1,25 +1,11 @@
 <!DOCTYPE html>
-<html lang="zh-Hans">
+<html>
 <head>
-  <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
-<meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 5.4.0">
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
-  <link rel="mask-icon" href="/images/logo.svg" color="#222">
-
-<link rel="stylesheet" href="/css/main.css">
-
-
-<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
-
-<script id="hexo-configurations">
-    var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"haley06.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
-  </script>
-
+  <meta charset="utf-8">
+  
+  
+  <title>html总结 | haley</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="HTML和CSS一 、了解网页1.什么是网页？        网站：因特网上根据一定规则，使用HTML等制作的用于展示特定内容相关的网页集合。        网页：网站中一页，是构成网站基本元素        格式：通常为HTML格式文件，它要通过浏览器阅读。        组成：图片，链接，文字，声音，视频等元素。        命名：通常以**.htm或.html**后缀结尾，俗称HTML文件">
 <meta property="og:type" content="article">
 <meta property="og:title" content="html总结">
@@ -31,162 +17,83 @@
 <meta property="article:modified_time" content="2021-03-23T10:11:34.014Z">
 <meta property="article:author" content="haley06">
 <meta name="twitter:card" content="summary">
-
-<link rel="canonical" href="http://haley06.com/2021/03/24/html%E6%80%BB%E7%BB%93/">
-
-
-<script id="page-configurations">
-  // https://hexo.io/docs/variables.html
-  CONFIG.page = {
-    sidebar: "",
-    isHome : false,
-    isPost : true,
-    lang   : 'zh-Hans'
-  };
-</script>
-
-  <title>html总结 | haley</title>
   
+    <link rel="alternate" href="/atom.xml" title="haley" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
 
+  
+  
+<link rel="stylesheet" href="/css/style.css">
 
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
 
+  
+<meta name="generator" content="Hexo 5.4.0"></head>
 
-
-
-  <noscript>
-  <style>
-  .use-motion .brand,
-  .use-motion .menu-item,
-  .sidebar-inner,
-  .use-motion .post-block,
-  .use-motion .pagination,
-  .use-motion .comments,
-  .use-motion .post-header,
-  .use-motion .post-body,
-  .use-motion .collection-header { opacity: initial; }
-
-  .use-motion .site-title,
-  .use-motion .site-subtitle {
-    opacity: initial;
-    top: initial;
-  }
-
-  .use-motion .logo-line-before i { left: initial; }
-  .use-motion .logo-line-after i { right: initial; }
-  </style>
-</noscript>
-
-</head>
-
-<body itemscope itemtype="http://schema.org/WebPage">
-  <div class="container use-motion">
-    <div class="headband"></div>
-
-    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-container">
-  <div class="site-nav-toggle">
-    <div class="toggle" aria-label="تشغيل شريط التصفح">
-      <span class="toggle-line toggle-line-first"></span>
-      <span class="toggle-line toggle-line-middle"></span>
-      <span class="toggle-line toggle-line-last"></span>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">haley</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Suche"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Suche"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://haley06.com"></form>
+      </div>
     </div>
   </div>
+</header>
 
-  <div class="site-meta">
-
-    <a href="/" class="brand" rel="start">
-      <span class="logo-line-before"><i></i></span>
-      <h1 class="site-title">haley</h1>
-      <span class="logo-line-after"><i></i></span>
-    </a>
-  </div>
-
-  <div class="site-nav-right">
-    <div class="toggle popup-trigger">
-    </div>
-  </div>
-</div>
-
-
-
-
-<nav class="site-nav">
-  <ul id="menu" class="main-menu menu">
-        <li class="menu-item menu-item-home">
-
-    <a href="/" rel="section"><i class="fa-home fa-fw"></i>Home</a>
-
-  </li>
-        <li class="menu-item menu-item-archives">
-
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>الأرشيفات</a>
-
-  </li>
-  </ul>
-</nav>
-
-
-
-
-</div>
-    </header>
-
+      <div class="outer">
+        <section id="main"><article id="post-html总结" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2021/03/24/html%E6%80%BB%E7%BB%93/" class="article-date">
+  <time class="dt-published" datetime="2021-03-23T18:11:18.000Z" itemprop="datePublished">2021-03-23</time>
+</a>
     
-  <div class="back-to-top">
-    <i class="fa fa-arrow-up"></i>
-    <span>0%</span>
   </div>
-
-
-    <main class="main">
-      <div class="main-inner">
-        <div class="content-wrap">
-          
-
-          <div class="content post posts-expand">
-            
-
+  <div class="article-inner">
     
+    
+      <header class="article-header">
+        
   
+    <h1 class="p-name article-title" itemprop="headline name">
+      html总结
+    </h1>
   
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
-    <link itemprop="mainEntityOfPage" href="http://haley06.com/2021/03/24/html%E6%80%BB%E7%BB%93/">
 
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="haley06">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="haley">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          html总结
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">نُشر في</span>
-              
-
-              <time title="أُنشأ: 2021-03-23 18:11:18 / عُدل: 10:11:34" itemprop="dateCreated datePublished" datetime="2021-03-23T18:11:18Z">2021-03-23</time>
-            </span>
-
-          
-
-        </div>
       </header>
-
     
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
+    <div class="e-content article-entry" itemprop="articleBody">
       
         <h1 id="HTML和CSS"><a href="#HTML和CSS" class="headerlink" title="HTML和CSS"></a>HTML和CSS</h1><h2 id="一-、了解"><a href="#一-、了解" class="headerlink" title="一 、了解"></a>一 、了解</h2><h2 id="网页"><a href="#网页" class="headerlink" title="网页"></a>网页</h2><p>1.什么是网页？<br>        <em>网站</em>：因特网上根据一定规则，使用HTML等制作的用于展示特定内容相关的<strong>网页集合</strong>。<br>        <em>网页</em>：网站中一页，是构成网站基本元素<br>        <em>格式</em>：通常为<strong>HTML格式文件</strong>，它要通过浏览器阅读。<br>        <em>组成</em>：图片，链接，文字，声音，视频等元素。<br>        <em>命名</em>：通常以**.htm或.html**后缀结尾，俗称HTML文件</p>
 <h2 id="html"><a href="#html" class="headerlink" title="html"></a>html</h2><p><strong>超文本标记语言（Hyper Text Markup Language）</strong><br>             <strong>超</strong>：  1.超越文本限制，还可有图片，动画，视频等<br>                       2.一个文件跳转另一个，与世界各地主机文件链接即超链接文本.                                                                                                 &emsp;用于叙述网页，不是编程，而是标记语言（由标签组成）<br>网页的形成？<br>由网页元素（html标签描述）组成，通过浏览器解析给用户</p>
@@ -622,183 +529,129 @@
 
 <p>rows行数，cols每行字符，实际中用css</p>
 
+      
     </div>
-
-    
-    
-    
-
-      <footer class="post-footer">
-
-        
-
-
-        
-    <div class="post-nav">
-      <div class="post-nav-item"></div>
-      <div class="post-nav-item">
-    <a href="/2021/03/24/VueI%E6%80%BB%E7%BB%93/" rel="next" title="VueI总结">
-      VueI总结 <i class="fa fa-chevron-right"></i>
-    </a></div>
-    </div>
-      </footer>
-    
-  </article>
-  
-  
-  
-
-
-
-          </div>
-          
-
-<script>
-  window.addEventListener('tabs:register', () => {
-    let { activeClass } = CONFIG.comments;
-    if (CONFIG.comments.storage) {
-      activeClass = localStorage.getItem('comments_active') || activeClass;
-    }
-    if (activeClass) {
-      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
-      if (activeTab) {
-        activeTab.click();
-      }
-    }
-  });
-  if (CONFIG.comments.storage) {
-    window.addEventListener('tabs:click', event => {
-      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
-      let commentClass = event.target.classList[1];
-      localStorage.setItem('comments_active', commentClass);
-    });
-  }
-</script>
-
-        </div>
-          
-  
-  <div class="toggle sidebar-toggle">
-    <span class="toggle-line toggle-line-first"></span>
-    <span class="toggle-line toggle-line-middle"></span>
-    <span class="toggle-line toggle-line-last"></span>
-  </div>
-
-  <aside class="sidebar">
-    <div class="sidebar-inner">
-
-      <ul class="sidebar-nav motion-element">
-        <li class="sidebar-nav-toc">
-          المحتويات
-        </li>
-        <li class="sidebar-nav-overview">
-          عام
-        </li>
-      </ul>
-
-      <!--noindex-->
-      <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#HTML%E5%92%8CCSS"><span class="nav-number">1.</span> <span class="nav-text">HTML和CSS</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80-%E3%80%81%E4%BA%86%E8%A7%A3"><span class="nav-number">1.1.</span> <span class="nav-text">一 、了解</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BD%91%E9%A1%B5"><span class="nav-number">1.2.</span> <span class="nav-text">网页</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#html"><span class="nav-number">1.3.</span> <span class="nav-text">html</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B5%8F%E8%A7%88%E5%99%A8"><span class="nav-number">1.4.</span> <span class="nav-text">浏览器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8C%E3%80%81HTML%E6%A0%87%E7%AD%BE-%E4%B8%80"><span class="nav-number">1.5.</span> <span class="nav-text">二、HTML标签(一)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E8%AF%AD%E6%B3%95%E8%A7%84%E8%8C%83"><span class="nav-number">1.5.1.</span> <span class="nav-text">1.语法规范</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-HTML%E5%9F%BA%E6%9C%AC%E7%BB%93%E6%9E%84%E6%A0%87%E7%AD%BE"><span class="nav-number">1.5.2.</span> <span class="nav-text">2.HTML基本结构标签</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-%E7%BD%91%E9%A1%B5%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7"><span class="nav-number">1.5.3.</span> <span class="nav-text">3.网页开发工具</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#vs-Code-%E4%BD%BF%E7%94%A8"><span class="nav-number">1.5.4.</span> <span class="nav-text">vs Code 使用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BF%90%E8%A1%8C"><span class="nav-number">1.5.5.</span> <span class="nav-text">运行</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#VS-code%E5%B7%A5%E5%85%B7%E7%94%9F%E6%88%90%E9%AA%A8%E6%9E%B6%E6%A0%87%E7%AD%BE%E6%96%B0%E5%A2%9E%E4%BB%A3%E7%A0%81%EF%BC%9A%EF%BC%883%E4%B8%AA%EF%BC%89"><span class="nav-number">1.5.6.</span> <span class="nav-text">VS code工具生成骨架标签新增代码：（3个）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-html%E5%B8%B8%E7%94%A8%E6%A0%87%E7%AD%BE"><span class="nav-number">1.5.7.</span> <span class="nav-text">4.html常用标签</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-1%E6%A0%87%E7%AD%BE%E8%AF%AD%E4%B9%89"><span class="nav-number">1.5.8.</span> <span class="nav-text">4.1标签语义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-2%E6%A0%87%E9%A2%98%E6%A0%87%E7%AD%BE-lt-h1-gt-lt-h6-gt-%E9%87%8D%E8%A6%81"><span class="nav-number">1.5.9.</span> <span class="nav-text">4.2标题标签&lt;h1&gt;-&lt;h6&gt;(重要)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-3%E6%AE%B5%E8%90%BD%E5%92%8C%E6%8D%A2%E8%A1%8C%E6%A0%87%E7%AD%BE%EF%BC%88%E9%87%8D%E8%A6%81%EF%BC%89"><span class="nav-number">1.5.10.</span> <span class="nav-text">4.3段落和换行标签（重要）</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%AE%B5%E8%90%BD"><span class="nav-number">1.5.10.1.</span> <span class="nav-text">段落</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%8D%A2%E8%A1%8C"><span class="nav-number">1.5.10.2.</span> <span class="nav-text">换行</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-4%E6%96%87%E6%9C%AC%E6%A0%BC%E5%BC%8F%E5%8C%96%E6%A0%87%E7%AD%BE"><span class="nav-number">1.5.11.</span> <span class="nav-text">4.4文本格式化标签</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-5%E5%88%86%E5%8C%BA%E5%92%8C%E8%B7%A8%E5%BA%A6%E6%A0%87%E7%AD%BE"><span class="nav-number">1.5.12.</span> <span class="nav-text">4.5分区和跨度标签</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-6%E5%9B%BE%E5%83%8F%E6%A0%87%E7%AD%BE%EF%BC%88%E5%90%AB%E5%B1%9E%E6%80%A7%EF%BC%89%E5%92%8C%E8%B7%AF%E5%BE%84%EF%BC%88%E9%87%8D%E7%82%B9%EF%BC%89"><span class="nav-number">1.5.13.</span> <span class="nav-text">4.6图像标签（含属性）和路径（重点）</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%9B%BE%E5%83%8F%E6%A0%87%E7%AD%BE"><span class="nav-number">1.5.13.1.</span> <span class="nav-text">图像标签</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%B7%AF%E5%BE%84"><span class="nav-number">1.5.13.2.</span> <span class="nav-text">路径</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%89%8D%E6%9C%9F%E7%9F%A5%E8%AF%86%E9%93%BA%E5%9E%AB"><span class="nav-number">1.5.13.3.</span> <span class="nav-text">前期知识铺垫</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E7%9B%AE%E5%BD%95%E6%96%87%E4%BB%B6%E5%A4%B9%E5%92%8C%E6%A0%B9%E7%9B%AE%E5%BD%95"><span class="nav-number">1.5.13.3.1.</span> <span class="nav-text">目录文件夹和根目录</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#vscode%E6%89%93%E5%BC%80%E7%9B%AE%E5%BD%95%E6%96%87%E4%BB%B6%E5%A4%B9"><span class="nav-number">1.5.13.3.2.</span> <span class="nav-text">vscode打开目录文件夹</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%B7%AF%E5%BE%84-1"><span class="nav-number">1.5.13.4.</span> <span class="nav-text">路径</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E2%80%8C%E7%9B%B8%E5%AF%B9%E8%B7%AF%E5%BE%84"><span class="nav-number">1.5.13.4.1.</span> <span class="nav-text">‌相对路径</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E7%BB%9D%E5%AF%B9%E8%B7%AF%E5%BE%84"><span class="nav-number">1.5.13.4.2.</span> <span class="nav-text">绝对路径</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-7%E8%B6%85%E9%93%BE%E6%8E%A5%E6%A0%87%E7%AD%BE"><span class="nav-number">1.5.14.</span> <span class="nav-text">4.7超链接标签</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%B6%85%E9%93%BE%E6%8E%A5%E7%9A%84%E8%AF%AD%E6%B3%95%E8%A7%84%E8%8C%83"><span class="nav-number">1.5.14.1.</span> <span class="nav-text">超链接的语法规范</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%B1%9E%E6%80%A7"><span class="nav-number">1.5.14.2.</span> <span class="nav-text">属性</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%93%BE%E6%8E%A5%E7%9A%84%E5%88%86%E7%B1%BB"><span class="nav-number">1.5.14.3.</span> <span class="nav-text">链接的分类</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-html%E4%B8%AD%E7%9A%84%E6%B3%A8%E9%87%8A%E5%92%8C%E7%89%B9%E6%AE%8A%E5%AD%97%E7%AC%A6"><span class="nav-number">1.5.15.</span> <span class="nav-text">5.html中的注释和特殊字符</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%B3%A8%E9%87%8A%EF%BC%9A"><span class="nav-number">1.5.15.1.</span> <span class="nav-text">注释：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%89%B9%E6%AE%8A%E5%AD%97%E7%AC%A6"><span class="nav-number">1.5.15.2.</span> <span class="nav-text">特殊字符</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%89%E3%80%81HTML%E6%A0%87%E7%AD%BE%EF%BC%88%E4%BA%8C%EF%BC%89"><span class="nav-number">1.6.</span> <span class="nav-text">三、HTML标签（二）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%9B%AE%E6%A0%87"><span class="nav-number">1.6.1.</span> <span class="nav-text">目标</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E8%A1%A8%E6%A0%BC%E6%A0%87%E7%AD%BE"><span class="nav-number">1.6.2.</span> <span class="nav-text">1.表格标签</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1%E8%A1%A8%E6%A0%BC%E4%B8%BB%E8%A6%81%E4%BD%9C%E7%94%A8"><span class="nav-number">1.6.3.</span> <span class="nav-text">1.1表格主要作用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2%E8%A1%A8%E6%A0%BC%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95%EF%BC%9A"><span class="nav-number">1.6.4.</span> <span class="nav-text">1.2表格基本语法：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-3%E8%A1%A8%E5%A4%B4%E5%8D%95%E5%85%83%E6%A0%BC%E6%A0%87%E7%AD%BE"><span class="nav-number">1.6.5.</span> <span class="nav-text">1.3表头单元格标签</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-4%E8%A1%A8%E6%A0%BC%E5%B1%9E%E6%80%A7"><span class="nav-number">1.6.6.</span> <span class="nav-text">1.4表格属性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-5%E8%A1%A8%E6%A0%BC%E7%BB%93%E6%9E%84%E6%A0%87%E7%AD%BE"><span class="nav-number">1.6.7.</span> <span class="nav-text">1.5表格结构标签</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-6%E5%90%88%E5%B9%B6%E5%8D%95%E5%85%83%E6%A0%BC"><span class="nav-number">1.6.8.</span> <span class="nav-text">1.6合并单元格</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E5%88%97%E8%A1%A8%E6%A0%87%E7%AD%BE"><span class="nav-number">1.6.9.</span> <span class="nav-text">2.列表标签</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1%E6%97%A0%E5%BA%8F%E5%88%97%E8%A1%A8%EF%BC%88%E9%87%8D%E7%82%B9%EF%BC%89"><span class="nav-number">1.6.10.</span> <span class="nav-text">2.1无序列表（重点）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2%E6%9C%89%E5%BA%8F%E5%88%97%E8%A1%A8%EF%BC%88%E7%90%86%E8%A7%A3"><span class="nav-number">1.6.11.</span> <span class="nav-text">2.2有序列表（理解)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-3%E8%87%AA%E5%AE%9A%E4%B9%89%E5%88%97%E8%A1%A8%EF%BC%88%E9%87%8D%E7%82%B9%EF%BC%89"><span class="nav-number">1.6.12.</span> <span class="nav-text">2.3自定义列表（重点）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-%E8%A1%A8%E5%8D%95%E6%A0%87%E7%AD%BE%EF%BC%88%E6%B3%A8%E5%86%8C%E5%A4%9A%E7%94%A8%EF%BC%89"><span class="nav-number">1.6.13.</span> <span class="nav-text">3.表单标签（注册多用）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-1%E8%A1%A8%E5%8D%95%E6%9E%84%E6%88%90"><span class="nav-number">1.6.14.</span> <span class="nav-text">3.1表单构成</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-2%E8%A1%A8%E5%8D%95%E5%9F%9F"><span class="nav-number">1.6.15.</span> <span class="nav-text">3.2表单域</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-3%E8%A1%A8%E5%8D%95%E6%8E%A7%E4%BB%B6%EF%BC%88%E8%A1%A8%E5%8D%95%E5%85%83%E7%B4%A0%EF%BC%89"><span class="nav-number">1.6.16.</span> <span class="nav-text">3.3表单控件（表单元素）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-3-1type%E5%B1%9E%E6%80%A7%E5%80%BC%EF%BC%9A"><span class="nav-number">1.6.17.</span> <span class="nav-text">3.3.1type属性值：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-3-2-%E5%85%B6%E4%BB%96%E5%B1%9E%E6%80%A7"><span class="nav-number">1.6.18.</span> <span class="nav-text">3.3.2 其他属性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-4-2-lt-lable-gt-%E6%A0%87%E7%AD%BE"><span class="nav-number">1.6.19.</span> <span class="nav-text">3.4.2&lt;lable&gt;标签</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-4-3select%E4%B8%8B%E6%8B%89%E8%A1%A8%E5%8D%95%E5%85%83%E7%B4%A0"><span class="nav-number">1.6.20.</span> <span class="nav-text">3.4.3select下拉表单元素</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-4-4textarea%E6%A0%87%E7%AD%BE"><span class="nav-number">1.6.21.</span> <span class="nav-text">3.4.4textarea标签</span></a></li></ol></li></ol></li></ol></div>
-      </div>
-      <!--/noindex-->
-
-      <div class="site-overview-wrap sidebar-panel">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-  <p class="site-author-name" itemprop="name">haley06</p>
-  <div class="site-description" itemprop="description"></div>
-</div>
-<div class="site-state-wrap motion-element">
-  <nav class="site-state">
-      <div class="site-state-item site-state-posts">
-          <a href="/archives/">
-        
-          <span class="site-state-item-count">9</span>
-          <span class="site-state-item-name">المقالات</span>
-        </a>
-      </div>
-  </nav>
-</div>
-
-
-
-      </div>
-
-    </div>
-  </aside>
-  <div id="sidebar-dimmer"></div>
-
-
-      </div>
-    </main>
-
-    <footer class="footer">
-      <div class="footer-inner">
-        
-
-        
-
-<div class="copyright">
-  
-  &copy; 
-  <span itemprop="copyrightYear">2021</span>
-  <span class="with-love">
-    <i class="fa fa-heart"></i>
-  </span>
-  <span class="author" itemprop="copyrightHolder">haley06</span>
-</div>
-  <div class="powered-by">تطبيق الموقع <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a>
-  </div>
-
-        
-
-
-
-
-
-
-
-
-      </div>
+    <footer class="article-footer">
+      <a data-url="http://haley06.com/2021/03/24/html%E6%80%BB%E7%BB%93/" data-id="ckmul75ir0004g8vjcvd50hw1" data-title="html总结" class="article-share-link">Teilen</a>
+      
+      
+      
     </footer>
   </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2021/03/24/VueI%E6%80%BB%E7%BB%93/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Neuer</strong>
+      <div class="article-nav-title">
+        
+          VueI总结
+        
+      </div>
+    </a>
+  
+  
+</nav>
 
   
-  <script src="/lib/anime.min.js"></script>
-  <script src="/lib/velocity/velocity.min.js"></script>
-  <script src="/lib/velocity/velocity.ui.min.js"></script>
-
-<script src="/js/utils.js"></script>
-
-<script src="/js/motion.js"></script>
+</article>
 
 
-<script src="/js/schemes/pisces.js"></script>
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archiv</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/03/">March 2021</a></li></ul>
+    </div>
+  </div>
 
 
-<script src="/js/next-boot.js"></script>
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">letzter Beitrag</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2021/03/30/hello/">hello</a>
+          </li>
+        
+          <li>
+            <a href="/2021/03/30/%E6%B3%A8%E5%86%8C%E7%99%BB%E5%BD%95%E6%97%A5%E5%BF%97/">注册登录日志</a>
+          </li>
+        
+          <li>
+            <a href="/2021/03/30/git%E6%80%BB%E7%BB%93/">前3+git总结</a>
+          </li>
+        
+          <li>
+            <a href="/2021/03/30/css2/">css2</a>
+          </li>
+        
+          <li>
+            <a href="/2021/03/30/css%E6%80%BB%E7%BB%93/">css1</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
 
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2021 haley06<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.4.1.min.js"></script>
 
 
 
   
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
 
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-  
-
-  
-
+  </div>
 </body>
 </html>

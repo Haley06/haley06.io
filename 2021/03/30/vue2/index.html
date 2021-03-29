@@ -1,25 +1,11 @@
 <!DOCTYPE html>
-<html lang="zh-Hans">
+<html>
 <head>
-  <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
-<meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 5.4.0">
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
-  <link rel="mask-icon" href="/images/logo.svg" color="#222">
-
-<link rel="stylesheet" href="/css/main.css">
-
-
-<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
-
-<script id="hexo-configurations">
-    var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"haley06.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
-  </script>
-
+  <meta charset="utf-8">
+  
+  
+  <title>vue2 | haley</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="四 深入了解组件组件注册12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656667686970717273747576777879808182838485868788899091929394959697989">
 <meta property="og:type" content="article">
 <meta property="og:title" content="vue2">
@@ -31,162 +17,83 @@
 <meta property="article:modified_time" content="2021-03-29T10:27:11.002Z">
 <meta property="article:author" content="haley06">
 <meta name="twitter:card" content="summary">
-
-<link rel="canonical" href="http://haley06.com/2021/03/30/vue2/">
-
-
-<script id="page-configurations">
-  // https://hexo.io/docs/variables.html
-  CONFIG.page = {
-    sidebar: "",
-    isHome : false,
-    isPost : true,
-    lang   : 'zh-Hans'
-  };
-</script>
-
-  <title>vue2 | haley</title>
   
+    <link rel="alternate" href="/atom.xml" title="haley" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
 
+  
+  
+<link rel="stylesheet" href="/css/style.css">
 
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
 
+  
+<meta name="generator" content="Hexo 5.4.0"></head>
 
-
-
-  <noscript>
-  <style>
-  .use-motion .brand,
-  .use-motion .menu-item,
-  .sidebar-inner,
-  .use-motion .post-block,
-  .use-motion .pagination,
-  .use-motion .comments,
-  .use-motion .post-header,
-  .use-motion .post-body,
-  .use-motion .collection-header { opacity: initial; }
-
-  .use-motion .site-title,
-  .use-motion .site-subtitle {
-    opacity: initial;
-    top: initial;
-  }
-
-  .use-motion .logo-line-before i { left: initial; }
-  .use-motion .logo-line-after i { right: initial; }
-  </style>
-</noscript>
-
-</head>
-
-<body itemscope itemtype="http://schema.org/WebPage">
-  <div class="container use-motion">
-    <div class="headband"></div>
-
-    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-container">
-  <div class="site-nav-toggle">
-    <div class="toggle" aria-label="تشغيل شريط التصفح">
-      <span class="toggle-line toggle-line-first"></span>
-      <span class="toggle-line toggle-line-middle"></span>
-      <span class="toggle-line toggle-line-last"></span>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">haley</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Suche"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Suche"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://haley06.com"></form>
+      </div>
     </div>
   </div>
+</header>
 
-  <div class="site-meta">
-
-    <a href="/" class="brand" rel="start">
-      <span class="logo-line-before"><i></i></span>
-      <h1 class="site-title">haley</h1>
-      <span class="logo-line-after"><i></i></span>
-    </a>
-  </div>
-
-  <div class="site-nav-right">
-    <div class="toggle popup-trigger">
-    </div>
-  </div>
-</div>
-
-
-
-
-<nav class="site-nav">
-  <ul id="menu" class="main-menu menu">
-        <li class="menu-item menu-item-home">
-
-    <a href="/" rel="section"><i class="fa-home fa-fw"></i>Home</a>
-
-  </li>
-        <li class="menu-item menu-item-archives">
-
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>الأرشيفات</a>
-
-  </li>
-  </ul>
-</nav>
-
-
-
-
-</div>
-    </header>
-
+      <div class="outer">
+        <section id="main"><article id="post-vue2" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2021/03/30/vue2/" class="article-date">
+  <time class="dt-published" datetime="2021-03-29T18:26:07.000Z" itemprop="datePublished">2021-03-29</time>
+</a>
     
-  <div class="back-to-top">
-    <i class="fa fa-arrow-up"></i>
-    <span>0%</span>
   </div>
-
-
-    <main class="main">
-      <div class="main-inner">
-        <div class="content-wrap">
-          
-
-          <div class="content post posts-expand">
-            
-
+  <div class="article-inner">
     
+    
+      <header class="article-header">
+        
   
+    <h1 class="p-name article-title" itemprop="headline name">
+      vue2
+    </h1>
   
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
-    <link itemprop="mainEntityOfPage" href="http://haley06.com/2021/03/30/vue2/">
 
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="haley06">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="haley">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          vue2
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">نُشر في</span>
-              
-
-              <time title="أُنشأ: 2021-03-29 18:26:07 / عُدل: 10:27:11" itemprop="dateCreated datePublished" datetime="2021-03-29T18:26:07Z">2021-03-29</time>
-            </span>
-
-          
-
-        </div>
       </header>
-
     
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
+    <div class="e-content article-entry" itemprop="articleBody">
       
         <h2 id="四-深入了解组件"><a href="#四-深入了解组件" class="headerlink" title="四 深入了解组件"></a>四 深入了解组件</h2><h3 id="组件注册"><a href="#组件注册" class="headerlink" title="组件注册"></a>组件注册</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br></pre></td><td class="code"><pre><span class="line">父组件向子组件传递数据  局部组件操作   </span><br><span class="line"><span class="comment">&lt;!-- </span></span><br><span class="line"><span class="comment">        1.先确定要传递的数据</span></span><br><span class="line"><span class="comment">        2.在父组件html作用域中把数据传给子组件</span></span><br><span class="line"><span class="comment">        3.子组件用props:[多个变量],接收数据</span></span><br><span class="line"><span class="comment">        4.应用数据到子组件模板</span></span><br><span class="line"><span class="comment">     --&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;app&quot;</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!-- 有了这步操作,Vue实例的data中变量的值就传到了子组件中了 --&gt;</span></span><br><span class="line">        <span class="comment">&lt;!-- 必须绑定才能正确赋值传过来的内容,把&quot;movies&quot;当成变量,否则没有绑定传过来的是字符串赋值--&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">cpn</span> <span class="attr">:cmovies</span>=<span class="string">&quot;movies&quot;</span>  <span class="attr">:cmessage</span>=<span class="string">123</span>&gt;</span><span class="tag">&lt;/<span class="name">cpn</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!-- 没有绑定时 --&gt;</span></span><br><span class="line">        <span class="comment">&lt;!-- &lt;cpn cmovies=&quot;movies&quot;  cmessage=&quot;message&quot;&gt;&lt;/cpn&gt; --&gt;</span></span><br><span class="line">        <span class="comment">&lt;!-- 没有让父组件给子组件传message时会有默认值 --&gt;</span></span><br><span class="line">        <span class="comment">&lt;!-- &lt;cpn :cmovies=&quot;movies&quot; &gt;&lt;/cpn&gt; --&gt;</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">&lt;!-- 没有让父组件给子组件传movies时会有默认值 --&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">cpn</span>  <span class="attr">:cmessage</span>=<span class="string">&quot;message&quot;</span> &gt;</span><span class="tag">&lt;/<span class="name">cpn</span>&gt;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="comment">&lt;!-- 创建模板 --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">template</span> <span class="attr">id</span>=<span class="string">&quot;tpe1&quot;</span>&gt;</span></span><br><span class="line">               <span class="comment">&lt;!-- 模板中的元素超过一行必须用div把它整个框起来,否则会报错 --&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">            <span class="comment">&lt;!-- 遍历传过来的数组 --&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">ul</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">li</span> <span class="attr">v-for</span>=<span class="string">&quot;(item,index) in cmovies&quot;</span>&gt;</span>&#123;&#123;item&#125;&#125; &#123;&#123;index&#125;&#125;<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">h2</span>&gt;</span>&#123;&#123;cmessage&#125;&#125;<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">h3</span>&gt;</span>&#123;&#123;propA&#125;&#125;<span class="tag">&lt;/<span class="name">h3</span>&gt;</span></span><br><span class="line">            <span class="comment">&lt;!-- &#123;&#123;movies&#125;   会报错,因为子组件不能使用父组件的数据 --&gt;</span></span><br><span class="line">            <span class="comment">&lt;!-- 此时已经完成父组件向子组件传递数据,可以使用子组件中的数据了 --&gt;</span></span><br><span class="line">            <span class="comment">&lt;!-- &lt;p&gt;&#123;&#123;cmovies&#125;&#125;&lt;/p&gt;</span></span><br><span class="line"><span class="comment">            &lt;h2&gt;&#123;&#123;cmessage&#125;&#125;&lt;/h2&gt; --&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&#x27;../vue.js&#x27;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="javascript"><span class="comment">// 这个cpn用作局部组件对象的构造器(是Vue的子组件)</span></span></span><br><span class="line"><span class="javascript"><span class="comment">// 父传子:props</span></span></span><br><span class="line"><span class="javascript">        <span class="keyword">const</span> cpn=&#123;</span></span><br><span class="line"><span class="javascript">            <span class="comment">//得到构造器中的模板</span></span></span><br><span class="line"><span class="javascript">            template:<span class="string">&quot;#tpe1&quot;</span>,</span></span><br><span class="line"></span><br><span class="line"><span class="javascript">            <span class="comment">// props后边可以跟很多形式</span></span></span><br><span class="line"></span><br><span class="line"><span class="javascript">            <span class="comment">// props后边跟一个数组,里边写变量名(有单引号的变量)</span></span></span><br><span class="line"><span class="javascript">            <span class="comment">// props:[&#x27;cmovies&#x27;,&#x27;cmessage&#x27;],</span></span></span><br><span class="line">            </span><br><span class="line"><span class="javascript">            <span class="comment">// 后边跟一个对象</span></span></span><br><span class="line">            props:&#123;</span><br><span class="line"><span class="javascript">                <span class="comment">//.控制类型 下边表示此变量为数组类型和String类型的</span></span></span><br><span class="line">                /* cmovies:Array,</span><br><span class="line"><span class="javascript">                cmessage:<span class="built_in">String</span> </span></span><br><span class="line">                当变量为多个类型时:</span><br><span class="line"><span class="javascript">                message:[<span class="built_in">Number</span>,<span class="built_in">Array</span>]</span></span><br><span class="line">                */</span><br><span class="line"></span><br><span class="line"><span class="javascript">                <span class="comment">// 2.提供一些默认信息以及要求必传值</span></span></span><br><span class="line">                cmessage:&#123;</span><br><span class="line"><span class="javascript">                    <span class="comment">// type属性表示cmessage变量时string类型的,当值为null,匹配任何类型</span></span></span><br><span class="line"><span class="javascript">                    <span class="comment">// type:String,</span></span></span><br><span class="line"></span><br><span class="line"><span class="javascript">                    <span class="comment">// 两种类型都可以时:</span></span></span><br><span class="line"><span class="javascript">                    type:[<span class="built_in">String</span>,<span class="built_in">Number</span>],</span></span><br><span class="line"><span class="javascript">                    <span class="comment">// default表示父组件不向子组件传值时的默认值</span></span></span><br><span class="line"><span class="javascript">                    <span class="keyword">default</span>:<span class="string">&#x27;aaaaaa&#x27;</span>,</span></span><br><span class="line"><span class="javascript">                    <span class="comment">// required属性表示必须向子组件传值,不传会报错</span></span></span><br><span class="line"><span class="javascript">                    required:<span class="literal">true</span></span></span><br><span class="line">                &#125;,</span><br><span class="line"><span class="javascript">                <span class="comment">// 类型是对象或数组时,默认值必须是一个函数</span></span></span><br><span class="line">                cmovies:&#123;</span><br><span class="line"><span class="javascript">                    type:<span class="built_in">Array</span>,</span></span><br><span class="line"><span class="javascript">                    <span class="comment">// default:[]//默认值必须是函数</span></span></span><br><span class="line"><span class="javascript">                    <span class="function"><span class="title">default</span>(<span class="params"></span>)</span>&#123;</span></span><br><span class="line"><span class="javascript">                        <span class="keyword">return</span> []</span></span><br><span class="line">                    &#125;,</span><br><span class="line"><span class="javascript">                    <span class="comment">// required为true表示必须传数据,否则会报错</span></span></span><br><span class="line"><span class="javascript">                    required:<span class="literal">true</span></span></span><br><span class="line">                &#125;,</span><br><span class="line"><span class="javascript">                <span class="comment">// 自定义验证函数</span></span></span><br><span class="line">                propA:&#123;</span><br><span class="line"><span class="javascript">                    validator:<span class="function"><span class="keyword">function</span>(<span class="params">value</span>)</span>&#123;</span></span><br><span class="line"><span class="javascript">                        <span class="comment">// 这个值必须匹配下列字符串中的一个</span></span></span><br><span class="line"><span class="javascript">                        <span class="keyword">return</span> [<span class="string">&#x27;success&#x27;</span>,<span class="string">&#x27;warning&#x27;</span>,<span class="string">&#x27;danger&#x27;</span>].indexof(value)!==-<span class="number">1</span>;</span></span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;,</span><br><span class="line"><span class="javascript">            <span class="function"><span class="title">data</span>(<span class="params"></span>)</span>&#123;</span></span><br><span class="line"><span class="javascript">                <span class="comment">// 组件中的data必须返回一个对象</span></span></span><br><span class="line"><span class="javascript">                <span class="keyword">return</span>&#123;&#125;</span></span><br><span class="line">            &#125;,</span><br><span class="line">            methods:&#123;</span><br><span class="line"></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line"><span class="javascript">    <span class="keyword">const</span> app=<span class="keyword">new</span> Vue(&#123;</span></span><br><span class="line"><span class="javascript">         el:<span class="string">&#x27;#app&#x27;</span>,</span></span><br><span class="line">         data:&#123;</span><br><span class="line"><span class="javascript">                message:<span class="string">&#x27;你好啊&#x27;</span>,</span></span><br><span class="line"><span class="javascript">                <span class="comment">// 希望movies的数据交给子组件展示</span></span></span><br><span class="line"><span class="javascript">                movies:[<span class="string">&#x27;haley&#x27;</span>,<span class="string">&#x27;Alice&#x27;</span>,<span class="string">&#x27;Peter&#x27;</span>],</span></span><br><span class="line"><span class="javascript">                <span class="keyword">do</span>:<span class="string">&quot;danger&quot;</span></span></span><br><span class="line">          &#125;,</span><br><span class="line"></span><br><span class="line"><span class="javascript">        <span class="comment">//   注册局部组件对象(子组件)</span></span></span><br><span class="line">          components:&#123;</span><br><span class="line"><span class="javascript">            <span class="comment">//   普通写法 调用名称: 值为cpn的构造器</span></span></span><br><span class="line"><span class="javascript">            <span class="comment">//   cpn:cpn</span></span></span><br><span class="line"><span class="javascript">            <span class="comment">//  ES6 增强写法</span></span></span><br><span class="line">            cpn,</span><br><span class="line"></span><br><span class="line">          &#125;</span><br><span class="line">          &#125;)</span><br><span class="line">    <span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">    </span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
@@ -394,186 +301,134 @@
 </li>
 </ul>
 
+      
     </div>
-
-    
-    
-    
-
-      <footer class="post-footer">
-
-        
-
-
-        
-    <div class="post-nav">
-      <div class="post-nav-item">
-    <a href="/2021/03/24/VueI%E6%80%BB%E7%BB%93/" rel="prev" title="VueI总结">
-      <i class="fa fa-chevron-left"></i> VueI总结
-    </a></div>
-      <div class="post-nav-item">
-    <a href="/2021/03/30/less%E5%92%8Csass/" rel="next" title="less和scss">
-      less和scss <i class="fa fa-chevron-right"></i>
-    </a></div>
-    </div>
-      </footer>
-    
-  </article>
-  
-  
-  
-
-
-
-          </div>
-          
-
-<script>
-  window.addEventListener('tabs:register', () => {
-    let { activeClass } = CONFIG.comments;
-    if (CONFIG.comments.storage) {
-      activeClass = localStorage.getItem('comments_active') || activeClass;
-    }
-    if (activeClass) {
-      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
-      if (activeTab) {
-        activeTab.click();
-      }
-    }
-  });
-  if (CONFIG.comments.storage) {
-    window.addEventListener('tabs:click', event => {
-      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
-      let commentClass = event.target.classList[1];
-      localStorage.setItem('comments_active', commentClass);
-    });
-  }
-</script>
-
-        </div>
-          
-  
-  <div class="toggle sidebar-toggle">
-    <span class="toggle-line toggle-line-first"></span>
-    <span class="toggle-line toggle-line-middle"></span>
-    <span class="toggle-line toggle-line-last"></span>
-  </div>
-
-  <aside class="sidebar">
-    <div class="sidebar-inner">
-
-      <ul class="sidebar-nav motion-element">
-        <li class="sidebar-nav-toc">
-          المحتويات
-        </li>
-        <li class="sidebar-nav-overview">
-          عام
-        </li>
-      </ul>
-
-      <!--noindex-->
-      <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9B%9B-%E6%B7%B1%E5%85%A5%E4%BA%86%E8%A7%A3%E7%BB%84%E4%BB%B6"><span class="nav-number">1.</span> <span class="nav-text">四 深入了解组件</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BB%84%E4%BB%B6%E6%B3%A8%E5%86%8C"><span class="nav-number">1.1.</span> <span class="nav-text">组件注册</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#prop"><span class="nav-number">1.2.</span> <span class="nav-text">prop</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%B1%BB%E5%9E%8B"><span class="nav-number">1.2.1.</span> <span class="nav-text">类型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BC%A0%E9%80%92%E9%9D%99%E6%80%81%E6%88%96%E5%8A%A8%E6%80%81-Prop"><span class="nav-number">1.2.2.</span> <span class="nav-text">传递静态或动态 Prop</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8D%95%E5%90%91%E6%95%B0%E6%8D%AE%E6%B5%81"><span class="nav-number">1.2.3.</span> <span class="nav-text">单向数据流</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#prop%E9%AA%8C%E8%AF%81"><span class="nav-number">1.2.4.</span> <span class="nav-text">prop验证</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%9B%BF%E6%8D%A2-%E5%90%88%E5%B9%B6%E5%B7%B2%E6%9C%89%E7%9A%84-Attribute-%E5%B1%9E%E6%80%A7"><span class="nav-number">1.2.5.</span> <span class="nav-text">替换&#x2F;合并已有的 Attribute(属性)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%BB%A7%E6%89%BFattr"><span class="nav-number">1.2.6.</span> <span class="nav-text">继承attr</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%87%AA%E5%AE%9A%E4%B9%89%E4%BA%8B%E4%BB%B6"><span class="nav-number">1.3.</span> <span class="nav-text">自定义事件</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%87%AA%E5%AE%9A%E4%B9%89%E7%BB%84%E4%BB%B6v-model"><span class="nav-number">1.3.1.</span> <span class="nav-text">自定义组件v-model</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#native%E5%92%8C-listeners"><span class="nav-number">1.3.2.</span> <span class="nav-text">.native和$listeners</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#sync%E4%BD%BF%E7%94%A8"><span class="nav-number">1.3.3.</span> <span class="nav-text">.sync使用</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BC%A0%E5%80%BC%E6%80%BB%E7%BB%93"><span class="nav-number">1.4.</span> <span class="nav-text">传值总结</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8F%92%E6%A7%BD"><span class="nav-number">1.5.</span> <span class="nav-text">插槽</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%BC%96%E8%AF%91%E4%BD%9C%E7%94%A8%E5%9F%9F"><span class="nav-number">1.5.1.</span> <span class="nav-text">编译作用域</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%90%8E%E5%A4%87%E5%86%85%E5%AE%B9"><span class="nav-number">1.5.2.</span> <span class="nav-text">后备内容</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BD%9C%E7%94%A8%E5%9F%9F%E6%8F%92%E6%A7%BD"><span class="nav-number">1.5.3.</span> <span class="nav-text">作用域插槽</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8A%A8%E6%80%81%E7%BB%84%E4%BB%B6-amp-%E5%BC%82%E6%AD%A5%E7%BB%84%E4%BB%B6"><span class="nav-number">1.6.</span> <span class="nav-text">动态组件 &amp; 异步组件</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%9C%A8%E5%8A%A8%E6%80%81%E7%BB%84%E4%BB%B6%E4%B8%8A%E4%BD%BF%E7%94%A8-keep-alive"><span class="nav-number">1.6.1.</span> <span class="nav-text">在动态组件上使用 keep-alive</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%BC%82%E6%AD%A5%E7%BB%84%E4%BB%B6%E7%9C%8B%E4%B8%8D%E6%87%82"><span class="nav-number">1.6.2.</span> <span class="nav-text">异步组件看不懂</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A4%84%E7%90%86%E8%BE%B9%E7%95%8C%E6%83%85%E5%86%B5-%E4%B8%8D%E5%A4%AA%E4%BC%9A%E7%94%A8"><span class="nav-number">1.7.</span> <span class="nav-text">处理边界情况(不太会用)</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%AE%BF%E9%97%AE%E6%A0%B9%E5%AE%9E%E4%BE%8B"><span class="nav-number">1.7.1.</span> <span class="nav-text">访问根实例</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%AE%BF%E9%97%AE%E7%88%B6%E5%AD%90%E7%BA%A7%E7%BB%84%E4%BB%B6%E5%AE%9E%E4%BE%8B"><span class="nav-number">1.7.2.</span> <span class="nav-text">访问父子级组件实例</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%AE%BF%E9%97%AE%E5%AD%90%E7%BB%84%E4%BB%B6%E5%AE%9E%E4%BE%8B%E6%88%96%E5%AD%90%E5%85%83%E7%B4%A0"><span class="nav-number">1.7.3.</span> <span class="nav-text">访问子组件实例或子元素</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BE%9D%E8%B5%96%E6%B3%A8%E5%85%A5"><span class="nav-number">1.7.4.</span> <span class="nav-text">依赖注入</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%A8%8B%E5%BA%8F%E5%8C%96%E7%9A%84%E4%BA%8B%E4%BB%B6%E4%BE%A6%E5%90%AC%E5%99%A8"><span class="nav-number">1.7.5.</span> <span class="nav-text">程序化的事件侦听器</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%BE%AA%E7%8E%AF%E5%BC%95%E7%94%A8"><span class="nav-number">1.7.6.</span> <span class="nav-text">循环引用</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%A8%A1%E6%9D%BF%E5%AE%9A%E4%B9%89%E7%9A%84%E6%9B%BF%E4%BB%A3%E5%93%81"><span class="nav-number">1.7.7.</span> <span class="nav-text">模板定义的替代品</span></a></li></ol></li></ol></li></ol></div>
-      </div>
-      <!--/noindex-->
-
-      <div class="site-overview-wrap sidebar-panel">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-  <p class="site-author-name" itemprop="name">haley06</p>
-  <div class="site-description" itemprop="description"></div>
-</div>
-<div class="site-state-wrap motion-element">
-  <nav class="site-state">
-      <div class="site-state-item site-state-posts">
-          <a href="/archives/">
-        
-          <span class="site-state-item-count">9</span>
-          <span class="site-state-item-name">المقالات</span>
-        </a>
-      </div>
-  </nav>
-</div>
-
-
-
-      </div>
-
-    </div>
-  </aside>
-  <div id="sidebar-dimmer"></div>
-
-
-      </div>
-    </main>
-
-    <footer class="footer">
-      <div class="footer-inner">
-        
-
-        
-
-<div class="copyright">
-  
-  &copy; 
-  <span itemprop="copyrightYear">2021</span>
-  <span class="with-love">
-    <i class="fa fa-heart"></i>
-  </span>
-  <span class="author" itemprop="copyrightHolder">haley06</span>
-</div>
-  <div class="powered-by">تطبيق الموقع <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a>
-  </div>
-
-        
-
-
-
-
-
-
-
-
-      </div>
+    <footer class="article-footer">
+      <a data-url="http://haley06.com/2021/03/30/vue2/" data-id="ckmul75j10007g8vjgiqe0may" data-title="vue2" class="article-share-link">Teilen</a>
+      
+      
+      
     </footer>
   </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2021/03/30/less%E5%92%8Csass/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Neuer</strong>
+      <div class="article-nav-title">
+        
+          less和scss
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2021/03/24/VueI%E6%80%BB%E7%BB%93/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Älter</strong>
+      <div class="article-nav-title">VueI总结</div>
+    </a>
+  
+</nav>
 
   
-  <script src="/lib/anime.min.js"></script>
-  <script src="/lib/velocity/velocity.min.js"></script>
-  <script src="/lib/velocity/velocity.ui.min.js"></script>
-
-<script src="/js/utils.js"></script>
-
-<script src="/js/motion.js"></script>
+</article>
 
 
-<script src="/js/schemes/pisces.js"></script>
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archiv</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/03/">March 2021</a></li></ul>
+    </div>
+  </div>
 
 
-<script src="/js/next-boot.js"></script>
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">letzter Beitrag</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2021/03/30/hello/">hello</a>
+          </li>
+        
+          <li>
+            <a href="/2021/03/30/%E6%B3%A8%E5%86%8C%E7%99%BB%E5%BD%95%E6%97%A5%E5%BF%97/">注册登录日志</a>
+          </li>
+        
+          <li>
+            <a href="/2021/03/30/git%E6%80%BB%E7%BB%93/">前3+git总结</a>
+          </li>
+        
+          <li>
+            <a href="/2021/03/30/css2/">css2</a>
+          </li>
+        
+          <li>
+            <a href="/2021/03/30/css%E6%80%BB%E7%BB%93/">css1</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
 
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2021 haley06<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.4.1.min.js"></script>
 
 
 
   
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
 
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-  
-
-  
-
+  </div>
 </body>
 </html>
