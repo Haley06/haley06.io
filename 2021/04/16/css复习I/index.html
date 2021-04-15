@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="CSS复习css基础查缺补漏###css介绍  css是层叠样式表，用于修饰HTML，渲染网页  css权重 权重    选择器 权重    行内样式 1000   id选择器 100   类，伪类，属性选择器 10   标签，伪元素选择器 1   通配符选择器 0   ！important 最高优先级     css常见选择器 基础选择器 class、标签、id、通配符选择器最常见，这里不多说">
+<meta property="og:type" content="article">
+<meta property="og:title" content="css复习I">
+<meta property="og:url" content="http://haley06.com/2021/04/16/css%E5%A4%8D%E4%B9%A0I/index.html">
+<meta property="og:site_name" content="haley">
+<meta property="og:description" content="CSS复习css基础查缺补漏###css介绍  css是层叠样式表，用于修饰HTML，渲染网页  css权重 权重    选择器 权重    行内样式 1000   id选择器 100   类，伪类，属性选择器 10   标签，伪元素选择器 1   通配符选择器 0   ！important 最高优先级     css常见选择器 基础选择器 class、标签、id、通配符选择器最常见，这里不多说">
+<meta property="og:locale">
+<meta property="article:published_time" content="2021-04-15T20:03:24.000Z">
+<meta property="article:modified_time" content="2021-04-15T17:20:26.925Z">
+<meta property="article:author" content="haley06">
+<meta name="twitter:card" content="summary">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://haley06.com/2021/04/16/css复习I/"/>
+
+
+
+
+
+  <title>css复习I | haley</title>
+  
+
+
+
+
+
+
+
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">haley</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://haley06.com/2021/04/16/css%E5%A4%8D%E4%B9%A0I/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="haley">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">css复习I</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2021-04-16T04:03:24+08:00">
+                2021-04-15
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="CSS复习"><a href="#CSS复习" class="headerlink" title="CSS复习"></a>CSS复习</h1><h2 id="css基础查缺补漏"><a href="#css基础查缺补漏" class="headerlink" title="css基础查缺补漏"></a>css基础查缺补漏</h2><p>###css介绍</p>
+<ul>
+<li>css是层叠样式表，用于修饰HTML，渲染网页</li>
+</ul>
+<h3 id="css权重"><a href="#css权重" class="headerlink" title="css权重"></a>css权重</h3><ul>
+<li><p>权重</p>
+<table>
+<thead>
+<tr>
+<th>选择器</th>
+<th>权重</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>行内样式</td>
+<td>1000</td>
+</tr>
+<tr>
+<td>id选择器</td>
+<td>100</td>
+</tr>
+<tr>
+<td>类，伪类，属性选择器</td>
+<td>10</td>
+</tr>
+<tr>
+<td>标签，伪元素选择器</td>
+<td>1</td>
+</tr>
+<tr>
+<td>通配符选择器</td>
+<td>0</td>
+</tr>
+<tr>
+<td>！important</td>
+<td>最高优先级</td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+<h3 id="css常见选择器"><a href="#css常见选择器" class="headerlink" title="css常见选择器"></a>css常见选择器</h3><ul>
+<li><p><strong>基础选择器</strong></p>
+<p>class、标签、id、通配符选择器最常见，这里不多说</p>
+</li>
+<li><p><strong>复合选择器</strong></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br><span class="line">193</span><br><span class="line">194</span><br><span class="line">195</span><br><span class="line">196</span><br><span class="line">197</span><br><span class="line">198</span><br><span class="line">199</span><br><span class="line">200</span><br><span class="line">201</span><br><span class="line">202</span><br><span class="line">203</span><br><span class="line">204</span><br><span class="line">205</span><br><span class="line">206</span><br><span class="line">207</span><br><span class="line">208</span><br><span class="line">209</span><br><span class="line">210</span><br><span class="line">211</span><br><span class="line">212</span><br><span class="line">213</span><br><span class="line">214</span><br><span class="line">215</span><br><span class="line">216</span><br><span class="line">217</span><br><span class="line">218</span><br><span class="line">219</span><br><span class="line">220</span><br><span class="line">221</span><br><span class="line">222</span><br><span class="line">223</span><br><span class="line">224</span><br><span class="line">225</span><br><span class="line">226</span><br><span class="line">227</span><br><span class="line">228</span><br><span class="line">229</span><br></pre></td><td class="code"><pre><span class="line">  <span class="comment">&lt;!-- 1.选择 class 属性中同时有 name1 和 name2 的所有元素 两个名字之间没有空格 --&gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="name">style</span>&gt;</span></span><br><span class="line">      .name1.name2 &#123;</span><br><span class="line"><span class="css">        <span class="attribute">width</span>: <span class="number">100px</span>;</span></span><br><span class="line"><span class="css">        <span class="attribute">height</span>: <span class="number">100px</span>;</span></span><br><span class="line"><span class="css">        <span class="attribute">border</span>: <span class="number">5px</span> solid yellow;</span></span><br><span class="line"><span class="css">        <span class="attribute">background-color</span>: <span class="built_in">rgb</span>(<span class="number">49</span>, <span class="number">19</span>, <span class="number">19</span>);</span></span><br><span class="line">      &#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;name1 name2&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line"> <span class="comment">&lt;!--2. 选择作为类名 name1 元素后代的所有类名 name2 元素 注意两个名字之间有空格 --&gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="name">style</span>&gt;</span></span><br><span class="line">      .name1 .name2 &#123;</span><br><span class="line"><span class="css">        <span class="attribute">width</span>: <span class="number">100px</span>;</span></span><br><span class="line"><span class="css">        <span class="attribute">height</span>: <span class="number">100px</span>;</span></span><br><span class="line"><span class="css">        <span class="attribute">border</span>: <span class="number">5px</span> solid yellow;</span></span><br><span class="line"><span class="css">        <span class="attribute">background-color</span>: <span class="built_in">rgb</span>(<span class="number">49</span>, <span class="number">19</span>, <span class="number">19</span>);</span></span><br><span class="line">      &#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;name1&quot;</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">&quot;name2&quot;</span>&gt;</span>哈哈哈哈<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">&quot;name2&quot;</span>&gt;</span>嘻嘻嘻<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line"> <span class="comment">&lt;!--3.Element .class选择器     选择 class=&quot;intro&quot; 的所有 &lt;p&gt; 元素。 两个选择器之间没有空格 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="css">      <span class="selector-tag">p</span><span class="selector-class">.intro</span> &#123;</span></span><br><span class="line"><span class="css">        <span class="attribute">width</span>: <span class="number">100px</span>;</span></span><br><span class="line"><span class="css">        <span class="attribute">height</span>: <span class="number">100px</span>;</span></span><br><span class="line"><span class="css">        <span class="attribute">border</span>: <span class="number">5px</span> solid yellow;</span></span><br><span class="line"><span class="css">        <span class="attribute">background-color</span>: <span class="built_in">rgb</span>(<span class="number">49</span>, <span class="number">19</span>, <span class="number">19</span>);</span></span><br><span class="line"><span class="css">        <span class="attribute">color</span>: aliceblue;</span></span><br><span class="line">      &#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;name1&quot;</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">&quot;name2&quot;</span>&gt;</span>哈哈哈哈<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">&quot;intro&quot;</span>&gt;</span>嘿嘿嘿<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">&quot;intro&quot;</span>&gt;</span>嘻嘻嘻<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line"> <span class="comment">&lt;!--4.element,element  div,p  选择所有 &lt;div&gt; 元素和所有 &lt;p&gt; 元素。 例如p,div&#123;&#125; 用逗号隔开 --&gt;</span></span><br><span class="line"></span><br><span class="line"> <span class="comment">&lt;!--5.element element  div p  选择 &lt;div&gt; 元素内的所有 &lt;p&gt; 元素。 下边例子中两个div中的p都选中--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="css">      <span class="selector-tag">div</span> <span class="selector-tag">p</span> &#123;</span></span><br><span class="line"><span class="css">        <span class="attribute">width</span>: <span class="number">100px</span>;</span></span><br><span class="line"><span class="css">        <span class="attribute">height</span>: <span class="number">100px</span>;</span></span><br><span class="line"><span class="css">        <span class="attribute">border</span>: <span class="number">5px</span> solid yellow;</span></span><br><span class="line"><span class="css">        <span class="attribute">background-color</span>: <span class="built_in">rgb</span>(<span class="number">49</span>, <span class="number">19</span>, <span class="number">19</span>);</span></span><br><span class="line"><span class="css">        <span class="attribute">color</span>: aliceblue;</span></span><br><span class="line">      &#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;name1&quot;</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">&quot;name2&quot;</span>&gt;</span>哈哈哈哈<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">&quot;intro&quot;</span>&gt;</span>嘿嘿嘿<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">&quot;intro&quot;</span>&gt;</span>嘻嘻嘻<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">aside</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">p</span>&gt;</span>hi hi hi<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">span</span>&gt;</span>啦啦啦啦啦<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">aside</span>&gt;</span></span><br><span class="line"></span><br><span class="line"> <span class="comment">&lt;!--6. element&gt;element div &gt; p 选择父元素是 &lt;div&gt; 的所有 &lt;p&gt; 元素。  --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="css">      <span class="selector-tag">div</span> &gt; <span class="selector-tag">p</span> &#123;</span></span><br><span class="line"><span class="css">        <span class="attribute">width</span>: <span class="number">100px</span>;</span></span><br><span class="line"><span class="css">        <span class="attribute">height</span>: <span class="number">100px</span>;</span></span><br><span class="line"><span class="css">        <span class="attribute">border</span>: <span class="number">5px</span> solid yellow;</span></span><br><span class="line"><span class="css">        <span class="attribute">background-color</span>: <span class="built_in">rgb</span>(<span class="number">49</span>, <span class="number">19</span>, <span class="number">19</span>);</span></span><br><span class="line"><span class="css">        <span class="attribute">color</span>: aliceblue;</span></span><br><span class="line">      &#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;name1&quot;</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">&quot;name2&quot;</span>&gt;</span>哈哈哈哈<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">&quot;intro&quot;</span>&gt;</span>嘿嘿嘿<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">&quot;intro&quot;</span>&gt;</span>嘻嘻嘻<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>hi hi hi<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">span</span>&gt;</span>啦啦啦啦啦<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"></span><br><span class="line"> <span class="comment">&lt;!--7.element+element div + p  选择紧跟 &lt;div&gt; 元素的首个 &lt;p&gt; 元素--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="css">      <span class="selector-tag">div</span> + <span class="selector-tag">p</span> &#123;</span></span><br><span class="line"><span class="css">        <span class="attribute">width</span>: <span class="number">100px</span>;</span></span><br><span class="line"><span class="css">        <span class="attribute">height</span>: <span class="number">100px</span>;</span></span><br><span class="line"><span class="css">        <span class="attribute">border</span>: <span class="number">5px</span> solid yellow;</span></span><br><span class="line"><span class="css">        <span class="attribute">background-color</span>: <span class="built_in">rgb</span>(<span class="number">49</span>, <span class="number">19</span>, <span class="number">19</span>);</span></span><br><span class="line"><span class="css">        <span class="attribute">color</span>: aliceblue;</span></span><br><span class="line">      &#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;name1&quot;</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">&quot;name2&quot;</span>&gt;</span>哈哈哈哈<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">&quot;intro&quot;</span>&gt;</span>嘿嘿嘿<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">&quot;intro&quot;</span>&gt;</span>嘻嘻嘻<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>hi hi hi<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">span</span>&gt;</span>啦啦啦啦啦<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"></span><br><span class="line"> <span class="comment">&lt;!--8.element1~element2  p~ul  选择前面有 &lt;p&gt; 元素的每个 &lt;ul&gt; 元素。可以中间有其他标签,但不能ul被包裹与p隔开  下边只有嘻嘻嘻被渲染--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="css">      <span class="selector-tag">p</span> ~ <span class="selector-tag">ul</span> &#123;</span></span><br><span class="line"><span class="css">        <span class="attribute">list-style</span>: none;</span></span><br><span class="line"><span class="css">        <span class="attribute">width</span>: <span class="number">100px</span>;</span></span><br><span class="line"><span class="css">        <span class="attribute">height</span>: <span class="number">100px</span>;</span></span><br><span class="line"><span class="css">        <span class="attribute">border</span>: <span class="number">5px</span> solid yellow;</span></span><br><span class="line"><span class="css">        <span class="attribute">background-color</span>: <span class="built_in">rgb</span>(<span class="number">49</span>, <span class="number">19</span>, <span class="number">19</span>);</span></span><br><span class="line"><span class="css">        <span class="attribute">color</span>: aliceblue;</span></span><br><span class="line">      &#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">p</span>&gt;</span>呵呵呵呵呵<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">ul</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">li</span>&gt;</span>哈哈哈哈<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">ul</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">li</span>&gt;</span>嘻嘻嘻<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"></span><br><span class="line"> <span class="comment">&lt;!--9.[attribute] [class]  选择带有 class 属性的所有元素。 下边box1被选中 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="css">      <span class="selector-attr">[class]</span> &#123;</span></span><br><span class="line"><span class="css">        <span class="attribute">list-style</span>: none;</span></span><br><span class="line"><span class="css">        <span class="attribute">width</span>: <span class="number">100px</span>;</span></span><br><span class="line"><span class="css">        <span class="attribute">height</span>: <span class="number">100px</span>;</span></span><br><span class="line"><span class="css">        <span class="attribute">border</span>: <span class="number">5px</span> solid yellow;</span></span><br><span class="line"><span class="css">        <span class="attribute">background-color</span>: <span class="built_in">rgb</span>(<span class="number">49</span>, <span class="number">19</span>, <span class="number">19</span>);</span></span><br><span class="line"><span class="css">        <span class="attribute">color</span>: aliceblue;</span></span><br><span class="line">      &#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;box1&quot;</span>&gt;</span>哈哈哈哈<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;box2&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line"> <span class="comment">&lt;!--10. [attribute=value]	[target=_blank]	选择带有 target=&quot;_blank&quot; 属性的所有元素。 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="css">      <span class="selector-attr">[target=<span class="string">&quot;_blank&quot;</span>]</span> &#123;</span></span><br><span class="line"><span class="css">        <span class="attribute">list-style</span>: none;</span></span><br><span class="line"><span class="css">        <span class="attribute">width</span>: <span class="number">100px</span>;</span></span><br><span class="line"><span class="css">        <span class="attribute">height</span>: <span class="number">100px</span>;</span></span><br><span class="line"><span class="css">        <span class="attribute">border</span>: <span class="number">5px</span> solid yellow;</span></span><br><span class="line"><span class="css">        <span class="attribute">background-color</span>: <span class="built_in">rgb</span>(<span class="number">49</span>, <span class="number">19</span>, <span class="number">19</span>);</span></span><br><span class="line"><span class="css">        <span class="attribute">color</span>: aliceblue;</span></span><br><span class="line">      &#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">class</span>=<span class="string">&quot;box1&quot;</span> <span class="attr">target</span>=<span class="string">&quot;_self&quot;</span>&gt;</span>哈哈哈哈<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">id</span>=<span class="string">&quot;box2&quot;</span> <span class="attr">target</span>=<span class="string">&quot;_blank&quot;</span>&gt;</span>呵呵呵呵呵<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line"></span><br><span class="line"> <span class="comment">&lt;!--11. [attribute~=value]	[class~=flower]	选择 class属性含单词 &quot;flower&quot; 的所有元素 下边只有呵呵呵和哈哈哈被选中  --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="css">      <span class="selector-attr">[class~=<span class="string">&quot;flower&quot;</span>]</span> &#123;</span></span><br><span class="line"><span class="css">        <span class="attribute">list-style</span>: none;</span></span><br><span class="line"><span class="css">        <span class="attribute">width</span>: <span class="number">100px</span>;</span></span><br><span class="line"><span class="css">        <span class="attribute">height</span>: <span class="number">100px</span>;</span></span><br><span class="line"><span class="css">        <span class="attribute">border</span>: <span class="number">5px</span> solid yellow;</span></span><br><span class="line"><span class="css">        <span class="attribute">background-color</span>: <span class="built_in">rgb</span>(<span class="number">49</span>, <span class="number">19</span>, <span class="number">19</span>);</span></span><br><span class="line"><span class="css">        <span class="attribute">color</span>: aliceblue;</span></span><br><span class="line">      &#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">h1</span> <span class="attr">class</span>=<span class="string">&quot;a flower&quot;</span>&gt;</span>呵呵呵呵呵<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">h1</span> <span class="attr">class</span>=<span class="string">&quot;aflower&quot;</span>&gt;</span>嘿嘿嘿<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">h2</span> <span class="attr">sclass</span>=<span class="string">&quot;flower&quot;</span>&gt;</span>哈哈哈哈<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">h1</span> <span class="attr">class</span>=<span class="string">&quot;lower&quot;</span>&gt;</span>嘻嘻嘻<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line"></span><br><span class="line"> <span class="comment">&lt;!--12.[attribute|=value]	[class|=en]	选择 clas 属性值以 &quot;en&quot; 开头的有下划线所有元素。   --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="css"><span class="selector-attr">[class|=<span class="string">&quot;en&quot;</span>]</span> &#123;</span></span><br><span class="line"><span class="css">        <span class="attribute">list-style</span>: none;</span></span><br><span class="line"><span class="css">        <span class="attribute">width</span>: <span class="number">100px</span>;</span></span><br><span class="line"><span class="css">        <span class="attribute">height</span>: <span class="number">100px</span>;</span></span><br><span class="line"><span class="css">        <span class="attribute">border</span>: <span class="number">5px</span> solid yellow;</span></span><br><span class="line"><span class="css">        <span class="attribute">background-color</span>: <span class="built_in">rgb</span>(<span class="number">49</span>, <span class="number">19</span>, <span class="number">19</span>);</span></span><br><span class="line"><span class="css">        <span class="attribute">color</span>: aliceblue;</span></span><br><span class="line">      &#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">h1</span> <span class="attr">class</span>=<span class="string">&quot;en flower&quot;</span>&gt;</span>呵呵呵呵呵<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">h1</span> <span class="attr">class</span>=<span class="string">&quot;en-flower&quot;</span>&gt;</span>嘿嘿嘿<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">h2</span> <span class="attr">class</span>=<span class="string">&quot;eflower&quot;</span>&gt;</span>哈哈哈哈<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">h1</span> <span class="attr">class</span>=<span class="string">&quot;lowenr&quot;</span>&gt;</span>嘻嘻嘻<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line"></span><br><span class="line"> <span class="comment">&lt;!--13. [attribute^=value] 	a[href^=&quot;https&quot;]  选择其 src 属性值以 &quot;https&quot; 开头的每个 &lt;a&gt; 元素。--&gt;</span></span><br><span class="line"></span><br><span class="line"> <span class="comment">&lt;!--14. [attribute$=value]	a[href$=&quot;.pdf&quot;]	选择其 src 属性以 &quot;.pdf&quot; 结尾的所有 &lt;a&gt; 元素 --&gt;</span></span><br><span class="line"></span><br><span class="line"> <span class="comment">&lt;!--15. [attribute*=value]	a[href*=&quot;abc&quot;]	选择其 href 属性值中包含 &quot;abc&quot; 子串的每个 &lt;a&gt; 元素。下边都会被选中  --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="css"> <span class="selector-attr">[href*=<span class="string">&quot;abc&quot;</span>]</span> &#123;</span></span><br><span class="line"><span class="css">        <span class="attribute">list-style</span>: none;</span></span><br><span class="line"><span class="css">        <span class="attribute">width</span>: <span class="number">100px</span>;</span></span><br><span class="line"><span class="css">        <span class="attribute">height</span>: <span class="number">100px</span>;</span></span><br><span class="line"><span class="css">        <span class="attribute">border</span>: <span class="number">5px</span> solid yellow;</span></span><br><span class="line"><span class="css">        <span class="attribute">background-color</span>: <span class="built_in">rgb</span>(<span class="number">49</span>, <span class="number">19</span>, <span class="number">19</span>);</span></span><br><span class="line"><span class="css">        <span class="attribute">color</span>: aliceblue;</span></span><br><span class="line">      &#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;habcd&quot;</span>&gt;</span>哈哈哈<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;abc&quot;</span>&gt;</span>嘿嘿嘿<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;a-abc-d&quot;</span>&gt;</span>嘻嘻嘻<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;a ab abc&quot;</span>&gt;</span>哈哈哈哈<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">href</span>=<span class="string">&quot;abc&quot;</span>&gt;</span>叽叽叽<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"></span><br><span class="line">伪类和伪元素选择器见https://www.w3school.com.cn/css/css_pseudo_elements.asp,下边只会列出常见的</span><br><span class="line"><span class="comment">&lt;!--16.伪类选择器 使用单冒号表示</span></span><br><span class="line"><span class="comment">	这些伪类选择器也可用于点击其他标签时发生,不一定只用于a</span></span><br><span class="line"><span class="comment">	a：active 选择活动链接（鼠标按下未弹起链接）（改色） </span></span><br><span class="line"><span class="comment">	a:link&#123;样式&#125;  选择所有未被访问（未点击的）的链接（改色）.</span></span><br><span class="line"><span class="comment">	a:visited 选择所有已被访问的（点击过的）链接（改色）.</span></span><br><span class="line"><span class="comment">	a：hover&#123;color:  blue&#125; 选择鼠标指针位于其上（鼠标经过的）的链接（改色）. </span></span><br><span class="line"><span class="comment">--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="css">      <span class="selector-attr">[class*=<span class="string">&quot;abc&quot;</span>]</span><span class="selector-pseudo">:active</span> &#123;</span></span><br><span class="line"><span class="css">        <span class="attribute">list-style</span>: none;</span></span><br><span class="line"><span class="css">        <span class="attribute">width</span>: <span class="number">100px</span>;</span></span><br><span class="line"><span class="css">        <span class="attribute">height</span>: <span class="number">100px</span>;</span></span><br><span class="line"><span class="css">        <span class="attribute">border</span>: <span class="number">5px</span> solid yellow;</span></span><br><span class="line"><span class="css">        <span class="attribute">background-color</span>: <span class="built_in">rgb</span>(<span class="number">49</span>, <span class="number">19</span>, <span class="number">19</span>);</span></span><br><span class="line"><span class="css">        <span class="attribute">color</span>: aliceblue;</span></span><br><span class="line">      &#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;habcd&quot;</span>&gt;</span>哈哈哈<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">h2</span> <span class="attr">class</span>=<span class="string">&quot;abc&quot;</span>&gt;</span>嘿嘿嘿<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">h1</span> <span class="attr">class</span>=<span class="string">&quot;a-abc-d&quot;</span>&gt;</span>嘻嘻嘻<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">a</span> <span class="attr">class</span>=<span class="string">&quot;a ab abc&quot;</span>&gt;</span>哈哈哈哈<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">&quot;abcd&quot;</span>&gt;</span>叽叽叽<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!--17. 伪元素选择器 伪元素用于设置元素指定部分的样式  常用于设置元素的首字母、首行的样式</span></span><br><span class="line"><span class="comment">在元素的内容之前或之后插入内容 伪元素用双冒号 </span></span><br><span class="line"><span class="comment">--&gt;</span></span><br><span class="line">	1. ::before/::after相似,前者向该标签之前插入内容,后者向该标签之后插入元素,用content插入</span><br><span class="line">            <span class="tag">&lt;<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="css">                <span class="selector-tag">h1</span><span class="selector-pseudo">::after</span> &#123;</span></span><br><span class="line"><span class="css">                        <span class="attribute">content</span>: <span class="string">&quot;嘿嘿嘿&quot;</span>;</span></span><br><span class="line">                        &#125;</span><br><span class="line">            <span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">h1</span>&gt;</span>这是一个标题<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line"></span><br><span class="line">	2.	::first-line/::first-letter分别用于设置首行首字母样式  都只作用于块级元素</span><br><span class="line">        <span class="tag">&lt;<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="css">        <span class="selector-tag">p</span><span class="selector-pseudo">::first-line</span> &#123;</span></span><br><span class="line"><span class="css">          <span class="attribute">color</span>: <span class="number">#ff0000</span>;</span></span><br><span class="line">          只有部分属性可用在这里,详见链接</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">p</span>&gt;</span>嘿嘿嘿<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"></span><br><span class="line">	3.::selection	p::selection	选择用户选择的元素部分。</span><br><span class="line">		 <span class="tag">&lt;<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="css">            <span class="selector-pseudo">::selection</span> &#123;</span></span><br><span class="line"><span class="css">                          <span class="attribute">color</span>: red; </span></span><br><span class="line"><span class="css">                          <span class="attribute">background</span>: yellow;</span></span><br><span class="line">                        &#125;</span><br><span class="line">        <span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">p</span>&gt;</span>嘿嘿嘿<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!--18. 其他常见input伪类选择器  伪类选择器适用的标签范围不同有的能用在input上的也可用于其他标签    具体看链接https://www.w3school.com.cn/cssref/css_selectors.asp --&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- 1. :checked	input:checked	选择每个被选中的 &lt;input&gt; 元素。该选择器仅适用于input--&gt;</span></span><br><span class="line"><span class="comment">&lt;!--2.</span></span><br><span class="line"><span class="comment">	:enabled	input:enabled	选择每个启用的 &lt;input&gt; 元素。</span></span><br><span class="line"><span class="comment">	:default	input:default	选择默认的 &lt;input&gt; 元素。</span></span><br><span class="line"><span class="comment">	:disabled	input:disabled	选择每个被禁用的 &lt;input&gt; 元素  </span></span><br><span class="line"><span class="comment">	:empty	p:empty	选择没有子元素的每个 &lt;p&gt; 元素（包括文本节点）。</span></span><br><span class="line"><span class="comment">	:focus	input:focus	选择获得焦点的 input 元素</span></span><br><span class="line"><span class="comment">	:in-range	input:in-range	选择其值在指定范围内的 input 元素。</span></span><br><span class="line"><span class="comment">	:out-of-range	input:out-of-range	选择值超出指定范围的 input 元素。</span></span><br><span class="line"><span class="comment">    :indeterminate	input:indeterminate	选择处于不确定状态的 input 元素。</span></span><br><span class="line"><span class="comment">    :invalid	input:invalid	选择具有无效值(例如:不符合type属性email格式)的所有 input 元素。</span></span><br><span class="line"><span class="comment">	:valid	input:valid	选择带有有效值(例如:符合type属性email格式)的所有 input 元素。</span></span><br><span class="line"><span class="comment">    :optional	input:optional	选择不带 &quot;required&quot; 属性的 input 元素。</span></span><br><span class="line"><span class="comment">    ::placeholder	input::placeholder	选择已规定 &quot;placeholder&quot; 属性的 input 元素。</span></span><br><span class="line"><span class="comment">    :read-only	input:read-only	选择已规定 &quot;readonly&quot; 属性的 input 元素。</span></span><br><span class="line"><span class="comment">    :read-write	input:read-write	选择未规定 &quot;readonly&quot; 属性的 input 元素。</span></span><br><span class="line"><span class="comment">    :required	input:required	选择已规定 &quot;required&quot; 属性的 input 元素。</span></span><br><span class="line"><span class="comment">--&gt;</span></span><br><span class="line"><span class="comment">&lt;!--19. 其他伪类选择器</span></span><br><span class="line"><span class="comment">	:target	#news:target	选择当前活动的 #news 元素。与修饰当前活跃锚链接有关</span></span><br><span class="line"><span class="comment">	:fullscreen	:fullscreen	选择处于全屏模式的元素。</span></span><br><span class="line"><span class="comment">		:fullscreen &#123;</span></span><br><span class="line"><span class="comment">                      background-color: yellow;</span></span><br><span class="line"><span class="comment">                    &#125;</span></span><br><span class="line"><span class="comment">--&gt;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!--20 其他伪类选择元素的选择器 --&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- :first-child	p:first-child	选择属于其父元素的第一个子元素的每个 &lt;p&gt; 元素。</span></span><br><span class="line"><span class="comment">下面的呵呵呵和嘿嘿嘿会被选中</span></span><br><span class="line"><span class="comment">--&gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="css">      <span class="selector-tag">p</span><span class="selector-pseudo">:first</span>-child &#123;</span></span><br><span class="line"><span class="css">        <span class="attribute">width</span>: <span class="number">100px</span>;</span></span><br><span class="line"><span class="css">        <span class="attribute">height</span>: <span class="number">100px</span>;</span></span><br><span class="line"><span class="css">        <span class="attribute">border</span>: <span class="number">5px</span> solid yellow;</span></span><br><span class="line"><span class="css">        <span class="attribute">background-color</span>: <span class="built_in">rgb</span>(<span class="number">76</span>, <span class="number">196</span>, <span class="number">33</span>);</span></span><br><span class="line"><span class="css">        <span class="attribute">color</span>: aliceblue;</span></span><br><span class="line">      &#125;</span><br><span class="line"> <span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">&quot;abcd&quot;</span>&gt;</span>呵呵呵<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;habcd&quot;</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">&quot;abcd&quot;</span>&gt;</span>叽叽叽<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">&quot;abcd&quot;</span>&gt;</span>嘿嘿嘿<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">h1</span> <span class="attr">class</span>=<span class="string">&quot;a-abc-d&quot;</span>&gt;</span>嘻嘻嘻<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">a</span> <span class="attr">class</span>=<span class="string">&quot;a ab abc&quot;</span>&gt;</span>哈哈哈哈<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!--:last-child	p:last-child	选择属于其父元素最后一个子元素每个 &lt;p&gt; 元素。与:first-child同理--&gt;</span></span><br><span class="line"></span><br><span class="line">-of-type与-child不同之处在于-of-type是选择属于其父元素的首个该标签的每个该标签,而不是子元素下的每个该标签</span><br><span class="line"><span class="comment">&lt;!--:first-of-type	p:first-of-type	选择属于其父元素的首个 &lt;p&gt; 元素的每个 &lt;p&gt; 元素。</span></span><br><span class="line"><span class="comment">下边的咕咕咕和嘿嘿嘿嘿会被选中</span></span><br><span class="line"><span class="comment">--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="css">      <span class="selector-tag">p</span><span class="selector-pseudo">:first</span>-of-type &#123;</span></span><br><span class="line"><span class="css">        <span class="attribute">width</span>: <span class="number">100px</span>;</span></span><br><span class="line"><span class="css">        <span class="attribute">height</span>: <span class="number">100px</span>;</span></span><br><span class="line"><span class="css">        <span class="attribute">border</span>: <span class="number">5px</span> solid yellow;</span></span><br><span class="line"><span class="css">        <span class="attribute">background-color</span>: <span class="built_in">rgb</span>(<span class="number">76</span>, <span class="number">196</span>, <span class="number">33</span>);</span></span><br><span class="line"><span class="css">        <span class="attribute">color</span>: aliceblue;</span></span><br><span class="line">      &#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- h1-h6 p标签都不能嵌套 --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">h1</span>&gt;</span>哈哈哈哈<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>嘿嘿嘿嘿<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>嘻嘻嘻<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">p</span>&gt;</span>咕咕咕<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!--:last-of-type	p:last-of-type	选择属于其父元素的最后 &lt;p&gt; 元素的每个 &lt;p&gt; 元素.与:first-of-type同理--&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- :not(selector)	:not(p)	选择非 &lt;p&gt; 元素的每个元素。--&gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="css">      <span class="selector-pseudo">:not</span>(<span class="selector-tag">p</span>, <span class="selector-tag">body</span>, <span class="selector-tag">html</span>) &#123;</span></span><br><span class="line"><span class="css">        <span class="attribute">width</span>: <span class="number">100px</span>;</span></span><br><span class="line"><span class="css">        <span class="attribute">height</span>: <span class="number">100px</span>;</span></span><br><span class="line"><span class="css">        <span class="attribute">border</span>: <span class="number">5px</span> solid yellow;</span></span><br><span class="line"><span class="css">        <span class="attribute">background-color</span>: <span class="built_in">rgb</span>(<span class="number">76</span>, <span class="number">196</span>, <span class="number">33</span>);</span></span><br><span class="line"><span class="css">        <span class="attribute">color</span>: aliceblue;</span></span><br><span class="line">      &#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">h1</span>&gt;</span>哈哈哈哈<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>嘿嘿嘿嘿<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>嘻嘻嘻<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!--:nth-child(n) 选择器匹配属于其父元素的第 N 个子元素，不论元素的类型。</span></span><br><span class="line"><span class="comment">n 可以是数字(表示第几个)、关键词或公式。 关键词有odd(奇数) even(偶数)  公式类似(3n+0)</span></span><br><span class="line"><span class="comment">下边的12 38 52 被选中--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="css">      <span class="selector-tag">ul</span> &gt; <span class="selector-tag">li</span><span class="selector-pseudo">:nth-child</span>(<span class="number">2</span>n + <span class="number">1</span>) &#123;</span></span><br><span class="line"><span class="css">        <span class="attribute">width</span>: <span class="number">100px</span>;</span></span><br><span class="line"><span class="css">        <span class="attribute">height</span>: <span class="number">50px</span>;</span></span><br><span class="line"><span class="css">        <span class="attribute">background-color</span>: green;</span></span><br><span class="line"><span class="css">        <span class="attribute">color</span>: <span class="built_in">rgb</span>(<span class="number">66</span>, <span class="number">52</span>, <span class="number">190</span>);</span></span><br><span class="line">      &#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">ul</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">li</span>&gt;</span>12<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">li</span>&gt;</span>56<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">li</span>&gt;</span>38<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">li</span>&gt;</span>47<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">li</span>&gt;</span>52<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!--:nth-last-child(n)	p:nth-last-child(2)	同上，从最后一个子元素开始计数。 --&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!--</span></span><br><span class="line"><span class="comment">:nth-of-type(n)	p:nth-of-type(2)	选择属于其父元素第二个 &lt;p&gt; 元素的每个 &lt;p&gt; 元素。</span></span><br><span class="line"><span class="comment">下边选到的是56</span></span><br><span class="line"><span class="comment">:nth-last-of-type(n)	p:nth-last-of-type(2)	同上，但是从最后一个子元素开始计数。--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="css">      <span class="selector-tag">ul</span> &gt; <span class="selector-tag">li</span><span class="selector-pseudo">:nth-of-type</span>(<span class="number">2</span>) &#123;</span></span><br><span class="line"><span class="css">        <span class="attribute">width</span>: <span class="number">100px</span>;</span></span><br><span class="line"><span class="css">        <span class="attribute">height</span>: <span class="number">50px</span>;</span></span><br><span class="line"><span class="css">        <span class="attribute">background-color</span>: green;</span></span><br><span class="line"><span class="css">        <span class="attribute">color</span>: <span class="built_in">rgb</span>(<span class="number">66</span>, <span class="number">52</span>, <span class="number">190</span>);</span></span><br><span class="line">      &#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">ul</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">li</span>&gt;</span>1<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">li</span>&gt;</span>56<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">li</span>&gt;</span>3<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">li</span>&gt;</span>4<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">li</span>&gt;</span>5<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!--</span></span><br><span class="line"><span class="comment">	:only-of-type	p:only-of-type	选择属于其父元素唯一的 &lt;p&gt; 元素的每个 &lt;p&gt; 元素。</span></span><br><span class="line"><span class="comment">	:only-child	p:only-child	选择属于其父元素的唯一子元素的每个 &lt;p&gt; 元素。</span></span><br><span class="line"><span class="comment">下边的896和呵呵呵被选中  选h1分元素类型,改为p,h1后可实现嘿嘿嘿也被渲染</span></span><br><span class="line"><span class="comment">--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="css">      <span class="selector-tag">h1</span><span class="selector-pseudo">:only-of-type</span> &#123;</span></span><br><span class="line"><span class="css">        <span class="attribute">width</span>: <span class="number">100px</span>;</span></span><br><span class="line"><span class="css">        <span class="attribute">height</span>: <span class="number">50px</span>;</span></span><br><span class="line"><span class="css">        <span class="attribute">background-color</span>: green;</span></span><br><span class="line"><span class="css">        <span class="attribute">color</span>: <span class="built_in">rgb</span>(<span class="number">66</span>, <span class="number">52</span>, <span class="number">190</span>);</span></span><br><span class="line">      &#125;</span><br><span class="line"><span class="css">      <span class="selector-tag">p</span><span class="selector-pseudo">:only-child</span> &#123;</span></span><br><span class="line"><span class="css">        <span class="attribute">width</span>: <span class="number">50px</span>;</span></span><br><span class="line"><span class="css">        <span class="attribute">height</span>: <span class="number">50px</span>;</span></span><br><span class="line"><span class="css">        <span class="attribute">border-radius</span>: <span class="number">25px</span>;</span></span><br><span class="line"><span class="css">        <span class="attribute">background-color</span>: <span class="built_in">rgb</span>(<span class="number">34</span>, <span class="number">201</span>, <span class="number">89</span>);</span></span><br><span class="line">      &#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">h1</span>&gt;</span>896<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">p</span>&gt;</span>嘿嘿嘿<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">p</span>&gt;</span>呵呵呵呵呵<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">	</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h3 id="css面试题练习"><a href="#css面试题练习" class="headerlink" title="css面试题练习"></a>css面试题练习</h3><ul>
+<li><p>1.写代码:CSS div垂直水平居中 并且完成div高度是宽度的一半(宽度可以不指定)</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">&quot;X-UA-Compatible&quot;</span> <span class="attr">content</span>=<span class="string">&quot;IE=edge&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;viewport&quot;</span> <span class="attr">content</span>=<span class="string">&quot;width=device-width, initial-scale=1.0&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>练习<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- </span></span><br><span class="line"><span class="comment">        写代码:CSS div垂直水平居中 并且完成div高度是宽度的一半</span></span><br><span class="line"><span class="comment">        注意:要使用height:100%默认高需要设置html,body&#123;height:100%&#125;</span></span><br><span class="line"><span class="comment">            水平居中:margin:0 auto; justify-content:center;</span></span><br><span class="line"><span class="comment">            垂直居中:开flex,align-items:center(单子项) </span></span><br><span class="line"><span class="comment">			padding-bottom 如果用%来表示的话，计算是根据父元素的width的值进行计算的。</span></span><br><span class="line"><span class="comment">     --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">style</span>&gt;</span></span><br><span class="line">      * &#123;</span><br><span class="line"><span class="css">        <span class="attribute">padding</span>: <span class="number">0</span>;</span></span><br><span class="line"><span class="css">        <span class="attribute">margin</span>: <span class="number">0</span>;</span></span><br><span class="line">      &#125;</span><br><span class="line"><span class="css">      <span class="selector-tag">html</span>,</span></span><br><span class="line"><span class="css">      <span class="selector-tag">body</span> &#123;</span></span><br><span class="line"><span class="css">        <span class="attribute">width</span>: <span class="number">100%</span>;</span></span><br><span class="line"><span class="css">        <span class="attribute">height</span>: <span class="number">100%</span>;</span></span><br><span class="line">      &#125;</span><br><span class="line">      .outer &#123;</span><br><span class="line"><span class="css">        <span class="attribute">width</span>: <span class="number">50%</span>;</span></span><br><span class="line"><span class="css">        <span class="attribute">height</span>: <span class="number">100%</span>;</span></span><br><span class="line"><span class="css">        <span class="attribute">display</span>: flex;</span></span><br><span class="line"><span class="css">        <span class="attribute">background-color</span>: blue;</span></span><br><span class="line"><span class="css">        <span class="comment">/* 水平居中 */</span></span></span><br><span class="line"><span class="css">        <span class="attribute">margin</span>: <span class="number">0</span> auto;</span></span><br><span class="line"><span class="css">        <span class="attribute">align-items</span>: center;</span></span><br><span class="line">      &#125;</span><br><span class="line">      .inner &#123;</span><br><span class="line"><span class="css">        <span class="attribute">position</span>: relative;</span></span><br><span class="line"><span class="css">        <span class="attribute">width</span>: <span class="number">100%</span>;</span></span><br><span class="line"><span class="css">        <span class="attribute">height</span>: <span class="number">0</span>;</span></span><br><span class="line"><span class="css">        <span class="attribute">background-color</span>: red;</span></span><br><span class="line"><span class="css">        <span class="attribute">padding-bottom</span>: <span class="number">50%</span>;</span></span><br><span class="line">      &#125;</span><br><span class="line">      .box &#123;</span><br><span class="line"><span class="css">        <span class="attribute">position</span>: absolute;</span></span><br><span class="line"><span class="css">        <span class="attribute">width</span>: <span class="number">100%</span>;</span></span><br><span class="line"><span class="css">        <span class="attribute">height</span>: <span class="number">100%</span>;</span></span><br><span class="line"><span class="css">        <span class="attribute">display</span>: flex;</span></span><br><span class="line"><span class="css">        <span class="comment">/* 让字体水平居中 */</span></span></span><br><span class="line"><span class="css">        justify-items: center;</span></span><br><span class="line"><span class="css">        <span class="comment">/* 让字体垂直居中 */</span></span></span><br><span class="line"><span class="css">        <span class="attribute">align-items</span>: center;</span></span><br><span class="line">      &#125;</span><br><span class="line">    <span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;outer&quot;</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;inner&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;box&quot;</span>&gt;</span>hello<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure></li>
+<li><p>css画一个大小为父元素宽度一半的正方形</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">&quot;X-UA-Compatible&quot;</span> <span class="attr">content</span>=<span class="string">&quot;IE=edge&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;viewport&quot;</span> <span class="attr">content</span>=<span class="string">&quot;width=device-width, initial-scale=1.0&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>练习02<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- css画一个大小为父元素宽度一半的正方形</span></span><br><span class="line"><span class="comment">    利用:  padding-bottom 如果用%来表示的话，计算是根据父元素的width的值进行计算的。 </span></span><br><span class="line"><span class="comment">    --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">style</span>&gt;</span></span><br><span class="line">      .outer &#123;</span><br><span class="line"><span class="css">        <span class="attribute">width</span>: <span class="number">400px</span>;</span></span><br><span class="line"><span class="css">        <span class="attribute">height</span>: <span class="number">600px</span>;</span></span><br><span class="line"><span class="css">        <span class="attribute">background-color</span>: red;</span></span><br><span class="line">      &#125;</span><br><span class="line">      .inner &#123;</span><br><span class="line"><span class="css">        <span class="attribute">width</span>: <span class="number">50%</span>;</span></span><br><span class="line"><span class="css">        <span class="attribute">padding-bottom</span>: <span class="number">50%</span>;</span></span><br><span class="line"><span class="css">        <span class="attribute">background-color</span>: blue;</span></span><br><span class="line">      &#125;</span><br><span class="line">    <span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;outer&quot;</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;inner&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure></li>
+</ul>
+<p><strong>练习总结:</strong></p>
+<ul>
+<li>padding-bottom/top 如果用%来表示的话，计算是根据父元素的width的值进行计算的</li>
+<li>要使用height:100%默认高需要设置html,body{height:100%}</li>
+<li><strong>css实现自适应正方形,等 宽高比 矩形</strong><ul>
+<li>width:设置百分比</li>
+<li>padding撑高</li>
+<li>如果只是相对于body而言,可以使用vw/vh</li>
+<li>伪元素设置 margin-top:100%;撑高</li>
+</ul>
+</li>
+</ul>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2021/04/16/SpringBoot%E6%80%BB%E7%BB%93/" rel="next" title="SpringBoot总结">
+                <i class="fa fa-chevron-left"></i> SpringBoot总结
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name"></p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">15</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#CSS%E5%A4%8D%E4%B9%A0"><span class="nav-number">1.</span> <span class="nav-text">CSS复习</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#css%E5%9F%BA%E7%A1%80%E6%9F%A5%E7%BC%BA%E8%A1%A5%E6%BC%8F"><span class="nav-number">1.1.</span> <span class="nav-text">css基础查缺补漏</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#css%E6%9D%83%E9%87%8D"><span class="nav-number">1.1.1.</span> <span class="nav-text">css权重</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#css%E5%B8%B8%E8%A7%81%E9%80%89%E6%8B%A9%E5%99%A8"><span class="nav-number">1.1.2.</span> <span class="nav-text">css常见选择器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#css%E9%9D%A2%E8%AF%95%E9%A2%98%E7%BB%83%E4%B9%A0"><span class="nav-number">1.1.3.</span> <span class="nav-text">css面试题练习</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">haley06</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
