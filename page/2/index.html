@@ -1872,9 +1872,54 @@
       
         
           
-            <h1 id="HTML和CSS"><a href="#HTML和CSS" class="headerlink" title="HTML和CSS"></a>HTML和CSS</h1><h2 id="一-、了解"><a href="#一-、了解" class="headerlink" title="一 、了解"></a>一 、了解</h2><h2 id="网页"><a href="#网页" class="headerlink" title="网页"></a>网页</h2><p>1.什么是网页？<br>        <em>网站</em>：因特网上根据一定规则，使用HTML等制作的用于展示特定内容相关的<strong>网页集合</strong>。<br>        <em>网页</em>：网站中一页，是构成网站基本元素<br>        <em>格式</em>：通常为<strong>HTML格式文件</strong>，它要通过浏览器阅读。<br>        <em>组成</em>：图片，链接，文字，声音，视频等元素。<br>        <em>命名</em>：通常以**.htm或.html**后缀结尾，俗称HTML文件</p>
+            <h1 id="HTML学习"><a href="#HTML学习" class="headerlink" title="HTML学习"></a>HTML学习</h1><h2 id="一-、了解"><a href="#一-、了解" class="headerlink" title="一 、了解"></a>一 、了解</h2><h2 id="网页"><a href="#网页" class="headerlink" title="网页"></a>网页</h2><p>1.什么是网页？<br>        <em>网站</em>：因特网上根据一定规则，使用HTML等制作的用于展示特定内容相关的<strong>网页集合</strong>。<br>        <em>网页</em>：网站中一页，是构成网站基本元素<br>        <em>格式</em>：通常为<strong>HTML格式文件</strong>，它要通过浏览器阅读。<br>        <em>组成</em>：图片，链接，文字，声音，视频等元素。<br>        <em>命名</em>：通常以**.htm或.html**后缀结尾，俗称HTML文件</p>
 <h2 id="html"><a href="#html" class="headerlink" title="html"></a>html</h2><p><strong>超文本标记语言（Hyper Text Markup Language）</strong><br>             <strong>超</strong>：  1.超越文本限制，还可有图片，动画，视频等<br>                       2.一个文件跳转另一个，与世界各地主机文件链接即超链接文本.                                                                                                 &emsp;用于叙述网页，不是编程，而是标记语言（由标签组成）<br>网页的形成？<br>由网页元素（html标签描述）组成，通过浏览器解析给用户</p>
-<h2 id="浏览器"><a href="#浏览器" class="headerlink" title="浏览器"></a>浏览器</h2><p><strong>常用</strong>：ie ，edge, firefox ,chrome,safari(苹果)，opera<br>       <strong>内核</strong>（渲染引擎）：负责读取网页（HTML文档）内容，整理讯息，计算网页显示方式并显示页面<br>ie(Trident),Safari(Webkit),chrome/Opera(Blink,Webkit分支，一般浏览器使用<br>       <strong>web标准</strong>：（最佳体验方案：结构，样式，行为相分离）<br>       W3C组织和其他标准化组织制定的一系列标准集合。<br>       W3C（万物网联盟）是国际最著名的标准化组织。<br><em>为什么需要</em>？<br>        a.让不同开发人写出页面更标准，统一<br>        b.降低网站流量费用<br>        c.易被搜索引擎搜索提高页面浏览速度<br>        d.网站易维护，内容可被多设备访问<br><em>构成？</em><br>a.结构:  用于对网页元素整理和分类，主要写到HTML文件中（最重要）<br>b.表现：用于设置网页版式，颜色，大小等外观样式，主要写到CSS文件中<br>c.行为：指网页模型定义及交互编写，主要为javascript文件中</p>
+<h2 id="浏览器"><a href="#浏览器" class="headerlink" title="浏览器"></a>浏览器</h2><p><strong>常用</strong>：ie ，edge, firefox ,chrome,safari(苹果)，opera<br>       <strong>内核</strong>（渲染引擎）：负责读取网页（HTML文档）内容，整理讯息，计算网页显示方式并显示页面<br>ie(Trident),Safari(Webkit),chrome/Opera(Blink,Webkit分支)，一般浏览器使用</p>
+<p>浏览器内核分成两部分：<strong>渲染引擎</strong>和<strong>JS引擎</strong></p>
+<ul>
+<li>由于JS引擎越来越独立，浏览器内核 就倾向于 单指 渲染引擎。</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>浏览器</th>
+<th>内核</th>
+<th>渲染引擎</th>
+<th>JS引擎</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>IE</td>
+<td>Trident</td>
+<td>Trident</td>
+<td>Chakra(查克拉)</td>
+</tr>
+<tr>
+<td>Safari</td>
+<td>Webkit</td>
+<td>webcore</td>
+<td>JScore</td>
+</tr>
+<tr>
+<td>Chrome</td>
+<td>Webkit</td>
+<td>Blink(webkit)</td>
+<td>V8</td>
+</tr>
+<tr>
+<td>Opera</td>
+<td>presto</td>
+<td>Blink(webkit)</td>
+<td>Carakan</td>
+</tr>
+<tr>
+<td>Firefox</td>
+<td>Gecko</td>
+<td>Gecko</td>
+<td>Monkey</td>
+</tr>
+</tbody></table>
+<p>  <strong>web标准</strong>：（最佳体验方案：结构，样式，行为相分离）<br>       W3C组织和其他标准化组织制定的一系列标准集合。<br>       W3C（万物网联盟）是国际最著名的标准化组织。<br><em>为什么需要</em>？<br>        a.让不同开发人写出页面更标准，统一<br>        b.降低网站流量费用<br>        c.易被搜索引擎搜索提高页面浏览速度<br>        d.网站易维护，内容可被多设备访问<br><em>构成？</em><br>a.结构:  用于对网页元素整理和分类，主要写到HTML文件中（最重要）<br>b.表现：用于设置网页版式，颜色，大小等外观样式，主要写到CSS文件中<br>c.行为：指网页模型定义及交互编写，主要为javascript文件中</p>
 <h2 id="二、HTML标签-一"><a href="#二、HTML标签-一" class="headerlink" title="二、HTML标签(一)"></a>二、HTML标签(一)</h2><p><em>学习</em>：学会书写注意规范，骨架标签，超链接标签，图片标签并alt和title区别，相对路径三种形式。</p>
 <h3 id="语法规范"><a href="#语法规范" class="headerlink" title="语法规范"></a>语法规范</h3><p>1.1标签：<br>a。所有标签在&lt;&gt;中，且大部分情况标签成对出现。<br>例如：开始（开放）标签<code>&lt;html&gt;</code>结束标签<code>&lt;/html&gt;</code><br>           单标签(很少）<code>&lt;br /&gt;</code>。HTML标签由尖括号包围关键词.<br>通常成对出现，开始，结尾（多了个/）我们称为双标签。<br>某些特殊标签为单刚标签（极少），<code>&lt;br /&gt;</code>称为单标签<br>      1.2标签关系：包含和并列(2种)<br>包含：<code>&lt;head&gt;</code></p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">title</span>&gt;</span>    <span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br></pre></td></tr></table></figure>
@@ -1914,6 +1959,8 @@
 <p>P为paragrapht(alt+z 自动换行)<br>特点：1. 文本在一个段中会根据浏览器窗口的大小自动换行<br>2.段落和段落之间保有空隙</p>
 <h4 id="换行"><a href="#换行" class="headerlink" title="换行"></a>换行</h4><p>在HTML中，一个段落中的文字会从左到右依次排列，直到浏览器窗口右端，然后才自动换行，如果希望某段强制换行显示，就用换行标签<br/>   break打断自己,换行显示。==标签语义==：强制换行.</p>
 <p>特点：单标签，简单开始新一行，跟段落不一样，段落间会插入垂直间距</p>
+<pre><code>&lt;hr /&gt;分隔线
+</code></pre>
 <h3 id="文本格式化标签"><a href="#文本格式化标签" class="headerlink" title="文本格式化标签"></a>文本格式化标签</h3><p>在网页中，有时需要设置粗体，斜体或下划线等效果，这时就需要用到HTML中的文本格式化标签，使文字以特殊的方式显示。<br>==标签语义==：突出重要性，比普通文字更重要。</p>
 <table>
 <thead>
@@ -2074,7 +2121,7 @@
 <li><p><code>&lt;tr&gt;&lt;/tr&gt;</code>定义表格行，必须嵌套于<code>&lt;table&gt;&lt;/table&gt;</code>中</p>
 </li>
 <li><p><code>&lt;td&gt;&lt;/td&gt;</code>为单元格，必须嵌套于<code>&lt;tr&gt;&lt;/tr&gt;</code>中（td为table date表格数据，表单元格主要内容）例：</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span>     </span><br><span class="line">    <span class="tag">&lt;<span class="name">table</span>&gt;</span>            </span><br><span class="line">        <span class="tag">&lt;<span class="name">tr</span>&gt;</span><span class="tag">&lt;<span class="name">td</span>&gt;</span>姓名<span class="tag">&lt;/<span class="name">td</span>&gt;</span>  td&gt;性别<span class="tag">&lt;/<span class="name">td</span>&gt;</span>  td&gt;年龄<span class="tag">&lt;/<span class="name">td</span>&gt;</span><span class="tag">&lt;/<span class="name">tr</span>&gt;</span>            </span><br><span class="line">        <span class="tag">&lt;<span class="name">tr</span>&gt;</span><span class="tag">&lt;<span class="name">td</span>&gt;</span>小红<span class="tag">&lt;/<span class="name">td</span>&gt;</span>  td&gt;女<span class="tag">&lt;/<span class="name">td</span>&gt;</span>  td&gt;18<span class="tag">&lt;/<span class="name">td</span>&gt;</span><span class="tag">&lt;/<span class="name">tr</span>&gt;</span> </span><br><span class="line">    <span class="tag">&lt;<span class="name">table</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br></pre></td></tr></table></figure></li>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span>     </span><br><span class="line">    <span class="tag">&lt;<span class="name">table</span>&gt;</span>            </span><br><span class="line">        <span class="tag">&lt;<span class="name">tr</span>&gt;</span><span class="tag">&lt;<span class="name">td</span>&gt;</span>姓名<span class="tag">&lt;/<span class="name">td</span>&gt;</span>  td&gt;性别<span class="tag">&lt;/<span class="name">td</span>&gt;</span>  <span class="tag">&lt;<span class="name">td</span>&gt;</span>年龄<span class="tag">&lt;/<span class="name">td</span>&gt;</span><span class="tag">&lt;/<span class="name">tr</span>&gt;</span>            </span><br><span class="line">        <span class="tag">&lt;<span class="name">tr</span>&gt;</span><span class="tag">&lt;<span class="name">td</span>&gt;</span>小红<span class="tag">&lt;/<span class="name">td</span>&gt;</span>  td&gt;女<span class="tag">&lt;/<span class="name">td</span>&gt;</span>  <span class="tag">&lt;<span class="name">td</span>&gt;</span>18<span class="tag">&lt;/<span class="name">td</span>&gt;</span><span class="tag">&lt;/<span class="name">tr</span>&gt;</span> </span><br><span class="line">    <span class="tag">&lt;<span class="name">table</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br></pre></td></tr></table></figure></li>
 </ul>
 <p>表格基本语法由3个标签组成。</p>
 <h3 id="表头单元格标签"><a href="#表头单元格标签" class="headerlink" title="表头单元格标签"></a>表头单元格标签</h3><p>一般表头单元格位于表格第一行货第一列，表头单元格里面的文本内容加粗居中显示,<code>&lt;th&gt;</code>标签位于html表格表头部分（table head）</p>
@@ -2296,7 +2343,7 @@
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">form</span>&gt;</span></span><br><span class="line">         用户名<span class="tag">&lt;<span class="name">input</span>  <span class="attr">type</span>=<span class="string">“text”</span> <span class="attr">name</span>=<span class="string">“username”</span> <span class="attr">value</span>=<span class="string">“请输入用户名”</span>&gt;</span><span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line">		密码：<span class="tag">&lt;<span class="name">input</span>  <span class="attr">type</span>=<span class="string">“password”</span>&gt;</span><span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line">		性别：男<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">“radio”</span> <span class="attr">name</span>=<span class="string">“sex”</span>  <span class="attr">value</span>=<span class="string">“男”</span>&gt;</span>女<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">“radio”</span>  <span class="attr">name</span>=<span class="string">“sex”</span>  <span class="attr">value</span>=<span class="string">“女”</span>&gt;</span><span class="tag">&lt;<span class="name">br</span>&gt;</span>(!--name是表单元素名字，这里性别单选按钮必须有相同的名字name,才可以实现多选一)</span><br><span class="line">		爱好：吃饭<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">“checkbox”</span> <span class="attr">name</span>=<span class="string">“hobby”</span>&gt;</span> 睡觉 <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">“checkbox”</span> <span class="attr">name</span>=<span class="string">“hobby”</span>&gt;</span> 				打豆豆<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">“checkbox”</span> <span class="attr">name</span>=<span class="string">“hobby”</span>&gt;</span> </span><br><span class="line"><span class="tag">&lt;/<span class="name">form</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
 <p>注：<br>ctrl  /注释快捷键<br>name和value是每个表单元素都有的属性值，主要给后台人员使用<br>name表单元素的名字，要求单选按钮和复选框有同样name值</p>
-<h3 id="lt-lable-gt-标签"><a href="#lt-lable-gt-标签" class="headerlink" title="&lt;lable&gt;标签"></a><code>&lt;lable&gt;</code>标签</h3><p><code>&lt;lable&gt;</code>标签为input元素定义标注（标签）<br>使用场景：绑定表单元素，当点击<code>&lt;lable&gt;</code>标签内文本时，浏览器就会自动将焦点转到或选择对应表单元素上。<br>语法规范：<br><code>&lt;lable for=&quot;sex&quot;&gt;男&lt;/lable&gt;</code><br><code>&lt;input type=&quot;radio&quot; name=&quot;sex&quot; id=&quot;sex&quot;/&gt;</code><br>lable中for属性要与相关元素id属性相同</p>
+<h3 id="lt-lable-gt-标签"><a href="#lt-lable-gt-标签" class="headerlink" title="&lt;lable&gt;标签"></a><code>&lt;lable&gt;</code>标签</h3><p><code>&lt;lable&gt;</code>标签为input元素定义标注（标签）<br>使用场景：绑定表单元素，当点击<code>&lt;lable&gt;</code>标签内文本时，浏览器就会自动将焦点转到或选择对应表单元素上。<br>语法规范：<br><code>&lt;lable for=&quot;sex&quot;&gt;男&lt;/lable&gt;</code><br><code>&lt;input type=&quot;radio&quot; name=&quot;sex&quot; id=&quot;sex&quot;/&gt;</code><br>==<em><strong>lable中for属性要与相关元素id属性相同</strong></em>==</p>
 <h3 id="select下拉表单元素"><a href="#select下拉表单元素" class="headerlink" title="select下拉表单元素"></a>select下拉表单元素</h3><p> 使用场景：多个学项选，节省页面空间用<code>&lt;select&gt;</code><br>语法：</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">select</span>&gt;</span></span><br><span class="line">     <span class="tag">&lt;<span class="name">option</span>&gt;</span>选项1<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">option</span>&gt;</span>选项2<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">option</span>&gt;</span>选项3<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">……</span><br><span class="line"><span class="tag">&lt;<span class="name">select</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
@@ -2305,6 +2352,130 @@
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">textarea</span> <span class="attr">rows</span>=<span class="string">&quot;3&quot;</span> <span class="attr">cols</span>=<span class="string">&quot;20&quot;</span>&gt;</span>这里文字会显示在框里<span class="tag">&lt;/<span class="name">textarea</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
 <p>rows行数，cols每行字符，实际中用css</p>
+<h1 id="HTML面试题总结"><a href="#HTML面试题总结" class="headerlink" title="HTML面试题总结"></a>HTML面试题总结</h1><h2 id="块级-行级元素"><a href="#块级-行级元素" class="headerlink" title="块级/行级元素"></a>块级/行级元素</h2><p><strong>块元素标签:</strong></p>
+<p><code>div p ul/ol/dl  dd/dt  li h1~h6 form header footer article aside section nav   </code></p>
+<p><code>address tbody  table caption(定义表格标题)  th tr td tfoot dir(目录) menu(菜单)</code> </p>
+<p><strong>行内元素</strong></p>
+<p><code>span a img label input button textaera select cite(引用)sub(下标) sup(上标)</code></p>
+<p><strong>空元素</strong></p>
+<p><code>br hr meta link</code></p>
+<h3 id="html5的标签"><a href="#html5的标签" class="headerlink" title="html5的标签"></a>html5的标签</h3><p>==新==</p>
+<ul>
+<li><p>`header section aside article footer nav``</p>
+</li>
+<li><p> ``figure(规定独立的流内容(图像、图表、照片、代码等等)) `</p>
+</li>
+</ul>
+<p>  <code>figcaption </code>(`` <figure> `元素的标题)</p>
+<ul>
+<li><code>mark(标记) canvas(定义图形用js) progress(进度条)</code></li>
+<li><code>details(用户可见的或者隐藏的需求的补充细节。) summary可见标题</code></li>
+<li><code>video audio source track(文本轨道)</code></li>
+<li><code>dialog(对话框) menu(菜单) hgroup(标题组)</code> </li>
+</ul>
+<p>==移除==</p>
+<p><code>fram noframes big u dir</code></p>
+<h3 id="简答"><a href="#简答" class="headerlink" title="简答"></a>简答</h3><ul>
+<li><p>iframe的使用?</p>
+<p>优点:</p>
+<ul>
+<li>能原封不动的把嵌入的网页展现出来</li>
+<li>有多个网页使用iframe,只需要修改iframe内容,即可实现每一个页面的修改,方便快捷</li>
+</ul>
+<p>缺点:</p>
+<ul>
+<li>增加http请求负担,出现各种滚动条</li>
+</ul>
+</li>
+<li><p>cookie,sessionStorage,localStorage的异同?</p>
+<p>相同: 都是保存在浏览器端,且是同源的</p>
+<p>区别:</p>
+<ul>
+<li><p>cookie为标识用户身份而存储在用户本地终端上的数据,</p>
+<p>始终在同源http请求中携带,即cookies在浏览器和服务器之间传递,而后两个不会把数据发给服务器,仅在本地保存。</p>
+</li>
+<li><p>存储大小限制不同,cookies不能超过4k,后两个可达到5MB</p>
+</li>
+<li><p>数据有效期不同.</p>
+<ul>
+<li>cookie:设置的过期日期之前一直有效,即使窗口关闭</li>
+<li>sessionStorage仅在浏览器窗口关闭之前有效</li>
+<li>localStorage始终有效,窗口和浏览器关闭也一直保存,用作长久数据保存</li>
+</ul>
+</li>
+<li><p>作用域不同</p>
+<ul>
+<li>cookie和localStorage在所有同源窗口共享</li>
+<li>sessionStorage不在不同浏览器共享,即使同一页面</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p>link和@import的区别</p>
+<ul>
+<li><p>@import只能加载css，低版本浏览器不支持</p>
+<p>link是xhtml标签，无兼容问题</p>
+</li>
+<li><p>link引用css时候页面载入同时加载，@import需要在页面完全加载以后，且它引用的css需要被加载完才加载</p>
+</li>
+<li><p>link支持使用js去改变样式，@import不支持，link权重高于@import</p>
+</li>
+</ul>
+</li>
+<li><p>浏览器构成：</p>
+<ul>
+<li>用户界面</li>
+<li>内核（JS引擎，渲染引擎（更主导））</li>
+<li>网络</li>
+</ul>
+</li>
+<li><p>对HTML语义化的理解</p>
+<ul>
+<li>HTML语义化让页面内容结构化,结构更加清晰,便于对浏览器,搜索引擎解析</li>
+<li>即使没有css也能以一种文档形式显示,便于阅读</li>
+<li>有利于SEO(搜索引擎优化)</li>
+<li>便于阅读源代码,维护和理解</li>
+</ul>
+</li>
+</ul>
+<h2 id="meta-viewport属性"><a href="#meta-viewport属性" class="headerlink" title="meta viewport属性"></a>meta viewport属性</h2><ul>
+<li><p>移动端浏览器通常都在一个比屏幕更宽的虚拟窗口中渲染页面，这个虚拟窗口就是viewport</p>
+</li>
+<li><p>meta标签作用是让当前viewport宽度等于设备宽度，同时不允许用户手动缩放</p>
+</li>
+<li><p>meta viewport6个属性</p>
+<table>
+<thead>
+<tr>
+<th>属性名</th>
+<th>解释</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>width</td>
+<td>设置layout viewport宽度,一个正整数,或者是字符串“width-device”</td>
+</tr>
+<tr>
+<td>initial-scale</td>
+<td>设置页面初始缩放值,为一个数字,可以带小数</td>
+</tr>
+<tr>
+<td>minimum-scale</td>
+<td>允许用户的最小缩放值</td>
+</tr>
+<tr>
+<td>maximum-scale</td>
+<td>允许用户的最大缩放值</td>
+</tr>
+<tr>
+<td>user-scalable</td>
+<td>是否允许用户进行缩放,值为“yes/no”</td>
+</tr>
+</tbody></table>
+</li>
+</ul>
 
           
         
