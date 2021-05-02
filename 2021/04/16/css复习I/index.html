@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="CSS," />
 
 
 
@@ -92,8 +92,9 @@
 <meta property="og:image" content="https://segmentfault.com/img/bVmVH8">
 <meta property="og:image" content="c:/Users/86138/AppData/Roaming/Typora/typora-user-images/image-20210417151836367.png">
 <meta property="article:published_time" content="2021-04-15T20:03:24.000Z">
-<meta property="article:modified_time" content="2021-04-26T16:40:07.896Z">
+<meta property="article:modified_time" content="2021-05-02T01:51:19.061Z">
 <meta property="article:author" content="haley06">
+<meta property="article:tag" content="CSS">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://img-blog.csdnimg.cn/20200114170309479.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0xpdV95dW56aGFv,size_16,color_FFFFFF,t_70">
 
@@ -899,7 +900,7 @@ padding:0;
 min-width:...px;
 }
 </stlyle>
-        
+            
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">    </span><br><span class="line"></span><br><span class="line">  </span><br><span class="line"></span><br><span class="line">#### flex圣杯</span><br><span class="line"></span><br><span class="line">&#96;&#96;&#96;html</span><br><span class="line">   &lt;!-- flex圣杯 --&gt;</span><br><span class="line">   &lt;style&gt;</span><br><span class="line">     html,</span><br><span class="line">     body &#123;</span><br><span class="line">       width: 100%;</span><br><span class="line">       height: 100%;</span><br><span class="line">     &#125;</span><br><span class="line">     &#x2F;* 使用flex圣杯 *&#x2F;</span><br><span class="line">     #header &#123;</span><br><span class="line">       height: 100px;</span><br><span class="line">       background-color: red;</span><br><span class="line">     &#125;</span><br><span class="line">     #container &#123;</span><br><span class="line">       display: flex;</span><br><span class="line">       height: 100%;</span><br><span class="line">     &#125;</span><br><span class="line">     #center &#123;</span><br><span class="line">       flex: 1;</span><br><span class="line">       height: 100%;</span><br><span class="line">       background-color: brown;</span><br><span class="line">     &#125;</span><br><span class="line">     #left &#123;</span><br><span class="line">       flex: 0 0 200px;</span><br><span class="line">       order: -1;</span><br><span class="line">       height: 100%;</span><br><span class="line">       background-color: yellow;</span><br><span class="line">     &#125;</span><br><span class="line">     #right &#123;</span><br><span class="line">       flex: 0 0 150px;</span><br><span class="line">       height: 100%;</span><br><span class="line">       background-color: blue;</span><br><span class="line">     &#125;</span><br><span class="line">     #footer &#123;</span><br><span class="line">       height: 100px;</span><br><span class="line">       background-color: green;</span><br><span class="line">     &#125;</span><br><span class="line">   &lt;&#x2F;style&gt;</span><br><span class="line"> &lt;&#x2F;head&gt;</span><br><span class="line"> &lt;body&gt;</span><br><span class="line">   &lt;div id&#x3D;&quot;header&quot;&gt;&lt;&#x2F;div&gt;</span><br><span class="line">   &lt;div id&#x3D;&quot;container&quot;&gt;</span><br><span class="line">     &lt;div id&#x3D;&quot;center&quot; class&#x3D;&quot;column&quot;&gt;&lt;&#x2F;div&gt;</span><br><span class="line">     &lt;div id&#x3D;&quot;left&quot; class&#x3D;&quot;column&quot;&gt;&lt;&#x2F;div&gt;</span><br><span class="line">     &lt;div id&#x3D;&quot;right&quot; class&#x3D;&quot;column&quot;&gt;&lt;&#x2F;div&gt;</span><br><span class="line">   &lt;&#x2F;div&gt;</span><br><span class="line">   &lt;div id&#x3D;&quot;footer&quot;&gt;&lt;&#x2F;div&gt;</span><br><span class="line"> &lt;&#x2F;body&gt;</span><br></pre></td></tr></table></figure></li>
 </ul>
 </li>
@@ -988,6 +989,12 @@ min-width:...px;
     
 
     <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/CSS/" rel="tag"># CSS</a>
+          
+        </div>
       
 
       
@@ -1087,7 +1094,7 @@ min-width:...px;
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">18</span>
+                  <span class="site-state-item-count">19</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -1095,6 +1102,15 @@ min-width:...px;
 
             
 
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                
+                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-name">标签</span>
+                
+              </div>
             
 
           </nav>
